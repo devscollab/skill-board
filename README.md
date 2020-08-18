@@ -4,7 +4,6 @@
 
 Skill Board is a place for the students to showcase their skills & experience and to show the availability & interest in receiving new opportunities to work on new projects and internships. Faculties and recruiters can go through this skill board to view the projects of students with the required skills and can contact the students directly for discussing any particular opportunity.
 
----
 
 ## How to contribute
 
@@ -47,8 +46,7 @@ Now, after making any changes to your project on the system, follow these simple
 
 `git commit -m "Commit Message"`
 
-`git pull upstream master`
-*The second last command checks for any changes in the main repo. If there are any conflicts, go through them and make required changes*
+`git pull upstream master` *This command checks for any conflicts with the main repo. Go through the conflicts and make changes, if required.*
 
 `git push`
 
@@ -66,8 +64,6 @@ After pushing the changes to your forked repository (your-username/skill-board),
 Give a detailed and useful explaination of what you did in the comments of pull requests and someone from the maintainers or team leads will review the code and accept the pull request or ask you to change some things before merging it.
 
 **How to Create a Pull Request? - [YouTube Link](https://youtu.be/HbSjyU2vf6Y?t=297)**
-
----
 
 ## Connect with us
 
