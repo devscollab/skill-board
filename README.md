@@ -4,6 +4,8 @@
 
 Skill Board is a place for the students to showcase their skills & experience and to show the availability & interest in receiving new opportunities to work on new projects and internships. Faculties and recruiters can go through this skill board to view the projects of students with the required skills and can contact the students directly for discussing any particular opportunity.
 
+---
+
 ## How to contribute
 
 There are some guildelines which everyone should follow while contributing to this opensource project. While working in large teams, it is necessary to follow these steps to avoid any conflicts in the code and continue a smooth flow of collaboration amongst the developers.
@@ -54,10 +56,19 @@ Now, after making any changes to your project on the system, follow these simple
 
 ### 4. Create a pull request
 
-After pushing the changes to your forked repository (your-username/skill-board), all you have to do is create a new pull request from your account by simply clicking on the *Create Pull Request* button.
+After pushing the changes to your forked repository (your-username/skill-board), all you have to do is create a new pull request from your account by simply clicking on the *Pull Request* button.
 
+![Pull Request](assets/readme/pull%20request.png)
 
+> NOTE:
+> If you are some commits behind of devscollab:master then you need to first git pull upstream master from the system, push it to your forked repository and then create the Pull Request.
 
 Give a detailed and useful explaination of what you did in the comments of pull requests and someone from the maintainers or team leads will review the code and accept the pull request or ask you to change some things before merging it.
 
 **How to Create a Pull Request? - [YouTube Link](https://youtu.be/HbSjyU2vf6Y?t=297)**
+
+---
+
+## Connect with us
+
+If you are facing any difficulties in managing or contributing to this project, please discuss it on the Discord Server in the #skill-board channel.
