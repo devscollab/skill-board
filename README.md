@@ -16,7 +16,7 @@ Skill Board is a place for the students to showcase their skills & experience an
 
 There are some guildelines which everyone should follow while contributing to this opensource project. While working in large teams, it is necessary to follow these steps to avoid any conflicts in the code and continue a smooth flow of collaboration amongst the developers.
 
-[Check the Contributing Guidelines](./CONTRIBUTING.md)
+[Check the Contribution Guidelines](./CONTRIBUTING.md)
 
 ## Connect with us
 
