@@ -1,6 +1,6 @@
 # Skill Board
 
-![Skill Board](assets/images/logo.png) <!-- .element height="50%" width="50%" -->
+![Skill Board](assets/images/logo.png) <!-- .element height="40%" width="40%" -->
 
 ![GitHub](https://img.shields.io/github/license/devscollab/skill-board) ![Maintenance](https://img.shields.io/maintenance/yes/2020) ![GitHub last commit](https://img.shields.io/github/last-commit/devscollab/skill-board) ![GitHub contributors](https://img.shields.io/github/contributors/devscollab/skill-board)
 
