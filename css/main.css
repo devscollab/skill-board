@@ -101,6 +101,7 @@
 
 /*-----------------------------INDEX PAGE--------------------------------*/
 
+
 .header{
     position: absolute;
     width: 100%;
@@ -151,6 +152,12 @@
     
 }
 
+.row{
+  width: 100%;
+  /* height: 100vh; */
+  /* border-box: 4px solid green; */
+
+}
 .text-your-skill{
     position: absolute;
     top: 10rem;
@@ -182,7 +189,7 @@
 .arrow-icon{
     color: #fff;
     position: absolute;
-    top: 38rem;
+    top: 39rem;
     left: 50%; 
     transform: scale(2.5);
   }
