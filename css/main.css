@@ -12,6 +12,18 @@
     background-color: #ad00ff;
 }
 
+/*----------------------------NAVIGATION BAR----------------------------*/
+.nav-logo{
+    border-radius: 15px;
+}
+.fa-search{
+    padding: 10px;
+    background-color: #ad00ff;
+    border-radius: 5px;
+}
+/*--------------------------END NAVIGATION BAR--------------------------*/
+
+
 /*-----------------------------LISITNG PAGE------------------------------*/
 
 #blob{
