@@ -6,6 +6,8 @@
 }
 
 .headerLine{
+    position: sticky;
+    top: 0;
     height: 10px;
     background-color: #ad00ff;
 }
@@ -18,5 +20,6 @@
     right: 0;
     width: 50vw;
     min-width: 500px;
+
 }
 /*-----------------------------END LISITNG PAGE--------------------------*/
