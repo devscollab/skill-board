@@ -25,5 +25,7 @@
     right: 0;
     width: 50vw;
     min-width: 500px;
+    z-index:-1;
+
 }
 /*-----------------------------END LISITNG PAGE--------------------------*/
