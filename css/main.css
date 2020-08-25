@@ -117,8 +117,8 @@
 .arrow-icon{
     color: #fff;
     position: absolute;
-    top: 37rem;
-    right: 33rem;
+    top: 38.5rem;
+    right: 43.5rem; 
     transform: scale(2.5);
   }
 
@@ -131,3 +131,5 @@
       background-color: #FDE6FF;
       border-radius: 20px;
   }
+
+  
