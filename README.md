@@ -20,6 +20,24 @@ There are some guildelines which everyone should follow while contributing to th
 
 [Check the Contribution Guidelines](./CONTRIBUTING.md)
 
+### Best Practices to follow
+
+1. Organiszation becomes easier if everyone in the team follows a certain naming pattern.
+For example, to make organisation easier, we sould follow a simple and logical naming pattern for CSS Classes
+in the format : pagenameElementName
+Example :
+   - The Top bar for this page (listings page) can be named .lisitingTopBar
+   - The profile cards for this page (listings page) can be named .lisitingProfileCards
+This helps when the css files become 1000s of lines long by the end of the project.
+
+2. While adding any element, make sure it is responsive and its contents fit on screen sizes.
+Users of SkillBoard will use is from all kinds of deivces like Small Mobiles, Large Mobiles, Tablets, Desktops,
+and in different orientations like portrait and landscape.
+You can test your page on other screen sizes by pressing F12 in chrome browser, and
+selecting a mobile view from the list of available devices.
+
+3. Read the comments in the code for more hints.
+
 ## Connect with us
 
 If you are facing any difficulties in managing or contributing to this project, please discuss it on the Discord Server in the #skill-board channel.
