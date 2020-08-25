@@ -20,18 +20,7 @@ There are some guildelines which everyone should follow while contributing to th
 
 [Check the Contribution Guidelines](./CONTRIBUTING.md)
 
-### To Do
-
-1. The purple blob on the bottom is overlapping the page contents. Find a way to fix that.
-2. Top Bar (as shown in the design)
-3. Profile Cards (as shown in the design)
-
-(All elements should be responsive. Making the profile cards fit all their content on a mobile screen is tricky.
-Try to find the best way to make cards responsive.
-Hint - You can try making the cards as horizontal bootstrap grid and make it collapse to vertical on smaller screens
-or use any other approach. )
-
-Best Practices to follow:
+### Best Practices to follow
 
 1. Organiszation becomes easier if everyone in the team follows a certain naming pattern.
 For example, to make organisation easier, we sould follow a simple and logical naming pattern for CSS Classes
