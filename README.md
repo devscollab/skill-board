@@ -22,17 +22,17 @@ There are some guildelines which everyone should follow while contributing to th
 
 ### Best Practices to follow
 
-1. Organiszation becomes easier if everyone in the team follows a certain naming pattern.
+1. Code organiszation becomes easier if everyone in the team follows a certain naming pattern.
 For example, to make organisation easier, we sould follow a simple and logical naming pattern for CSS Classes
 in the format : pagenameElementName
 Example :
-   - The Top bar for this page (listings page) can be named .lisitingTopBar
-   - The profile cards for this page (listings page) can be named .lisitingProfileCards
+   - The Top bar for this page (listings page) can be named <b>.lisitingTopBar</b>
+   - The profile cards for this page (listings page) can be named <b>.lisitingProfileCards</b> <br>
 This helps when the css files become 1000s of lines long by the end of the project.
 
-2. While adding any element, make sure it is responsive and its contents fit on screen sizes.
-Users of SkillBoard will use is from all kinds of deivces like Small Mobiles, Large Mobiles, Tablets, Desktops,
-and in different orientations like portrait and landscape.
+2. While adding any element, make sure it is responsive and its contents fit on all screen sizes.
+Users of SkillBoard will use it from all kinds of deivces like Small Mobiles, Large Mobiles, Tablets, Desktops,
+and in different orientations like portrait and landscape. Always consider this.
 You can test your page on other screen sizes by pressing F12 in chrome browser, and
 selecting a mobile view from the list of available devices.
 
