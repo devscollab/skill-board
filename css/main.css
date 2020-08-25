@@ -1,5 +1,22 @@
 /* Main CSS file for entire Website */
 
-.header{
+.links{
+    margin-top: 40vh;
     text-align: center;
 }
+
+.headerLine{
+    height: 10px;
+    background-color: #ad00ff;
+}
+
+/*-----------------------------LISITNG PAGE------------------------------*/
+
+#blob{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 50vw;
+    min-width: 500px;
+}
+/*-----------------------------END LISITNG PAGE--------------------------*/
