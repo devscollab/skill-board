@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="icon" href="./assets/images/favicon.png" type="image/png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
 </head>
 <body>
 
@@ -16,14 +18,24 @@
     <!---------------------------------------->
     
 
-    <!--DELETE THIS ENTIRE SECTION AND REPLACE IT WITH A TOP-BAR-->
-        <div id="listingTopBar" style="background-color: #ad00ff;color:white;padding:2vh; height: 100%;">
-            <b style="font-size: 4.5vh;">Skillboard</b>
-            <div style="margin-left:70%;display: inline-block;">
-                <button class="logbutton">Login</button>
-                <button class="signbutton">Sign up</button>
-            </div>
+    <!--NAVIGATION BAR-->
+      <nav class="navbar navbar-expand-md navbar-light">
+        <a class="navbar-brand" href="#"><img class="nav-logo" src="./assets/images/navbar_logo.png" alt="nav img"></a>
+        <form class="form-inline text-center">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+        </form>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-link"><i class="fas fa-filter"></i></li>
+              <li class="nav-link"><i class="fas fa-sort"></i></li>
+              <li class="nav-link"><i class="fas fa-sort"></i></li>
+          </ul>
         </div>
+      </nav>
     <!------------------END TOP-BAR--------------------------------------->
 
 
