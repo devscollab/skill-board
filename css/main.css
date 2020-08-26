@@ -24,8 +24,16 @@
 }
 .fa-search{
     padding: 10px;
-    background-color: #ad00ff;
+    background-color: #FF267C;
     border-radius: 5px;
+    color: white;
+    width: 65px;
+    height: 40px;
+    font-size: larger
+}
+
+#searchbar{
+    border-radius: 20px;
 }
 /*--------------------------END NAVIGATION BAR--------------------------*/
 
@@ -95,6 +103,22 @@
 .i-img{
     height: 100px;
     width: 100px;
+}
+.round-border{
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.40);
+}
+.card-button{
+    background-color: #FF267C;
+    border-radius: 3px;
+    color: white;
+    border-style: none;
+    width: 140px;
+    height: 43px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.row{
+    border-radius: 10px;
 }
 /*-----------------------------END LISITNG PAGE--------------------------*/
 
@@ -203,5 +227,7 @@
       background-color: #FDE6FF;
       border-radius: 20px;
   }
+
+  
 
   
