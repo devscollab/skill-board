@@ -1,5 +1,11 @@
 /* Main CSS file for entire Website */
 
+*,::before,::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .links{
     margin-top: 40vh;
     text-align: center;
@@ -30,7 +36,7 @@
     position: fixed;
     bottom: 0;
     right: 0;
-    width: 50vw;
+    width: 60%;
     min-width: 500px;
     z-index:-1;
 
@@ -95,6 +101,7 @@
 
 /*-----------------------------INDEX PAGE--------------------------------*/
 
+
 .header{
     position: absolute;
     width: 100%;
@@ -145,6 +152,12 @@
     
 }
 
+.row{
+  width: 100%;
+  /* height: 100vh; */
+  /* border-box: 4px solid green; */
+
+}
 .text-your-skill{
     position: absolute;
     top: 10rem;
@@ -169,11 +182,15 @@
     color: #DB8EFF;
 }
 
+.arrow{
+    position: relative;
+}
+
 .arrow-icon{
     color: #fff;
     position: absolute;
-    top: 38.5rem;
-    right: 43.5rem; 
+    top: 39rem;
+    left: 50%; 
     transform: scale(2.5);
   }
 
