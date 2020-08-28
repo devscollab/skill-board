@@ -244,10 +244,13 @@ body{
 }
 
 .login{
+    color: white;
     padding: 5px 20px;
     float: right;
 }
 .signUp{
+    font-weight: 700;
+    color:#A645F1;
     border-radius: 5px;
     margin-right: 20px;
     background-color: white;
