@@ -7,63 +7,40 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="icon" href="./assets/images/favicon.png" type="image/png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Padauk&family=Palanquin+Dark&display=swap" rel="stylesheet">`
+    <link href="https://fonts.googleapis.com/css2?family=Padauk&family=Palanquin+Dark&display=swap" rel="stylesheet">
 </head>
 
-
 <body>
-    <div class="header">
-        <h3 class="skill-board-title">Skill Board</h3>
-        <a href=""><h3 class="log-in">Log In</h3></a> 
-        <button type="button" class="btn btn-light sign-up-button">Sign Up</button>
+    <div class="headerAlign">
+        <div class="header">
+            <span class="skillBoard"> SkillBoard</span>
+            <span class="ml-auto"><button class="signUp"> Sign Up</button></span>
+            <span class="login ml-auto">Login</span>  
+        </div>
     </div>
-    
-    <div class="row">
-        <div class="col-12 col-lg-6">
-            <h1 class="text-your-skill">YOUR SKILL</h1>
-            <h3 class="text-goes-here">GOES HERE</h3>
-        </div>
 
-        
-        <div class="col-12 col-lg-6">
 
-            <div class="login-card">       
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="yourSkillText">
+                    <span class="yourSkill">Your Skill</span> <br>
+                    <span class="goesHere">Goes Here</span>
+                </div>
+
             </div>
+            <div class="col-12 col-md-6">
+                <div class="blankBox">
 
-        </div>
-
-
-        <!-- <div class="row">
-            <div class="col-lg-6 col-md-12">
-                <h1 class="text-your-skill">YOUR SKILL</h1>
-                <h3 class="text-goes-here">GOES HERE</h3>
-            </div>
-    
-            <div class="col-lg-6 col-md-12">
-                <div class="login-card">       
                 </div>
             </div>
-            </div> -->
-
-
+        </div>
     </div>
+
+
     <div class="arrow">
-
-        <a href="listing.html"> <ion-icon name="arrow-forward-circle" size="large" class="arrow-icon"></ion-icon> </a> 
+        <a href="./listing.html"><ion-icon name="arrow-forward-circle" class="arrowIcon"></ion-icon></a>
     </div>
-    
-
-
-    <div class="links">
-        <a href="./listing.html">
-            <!-- <button class="btn btn-primary btn-lg my-auto">
-                Go To Listings Page
-            </button> -->
-        </a>
-    </div>
-
-
-   
     <!-- BLOB -->
     <div class="blob">
         <img src="./assets/images/blob.png" id="blob">

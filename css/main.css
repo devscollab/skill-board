@@ -53,7 +53,7 @@ body{
 }
 
   .navLogo{
-      border-radius: 12%;
+      border-radius: 12px;
       width: 15vw;
       max-width: 120px;
   }
@@ -134,6 +134,9 @@ body{
     .listingSearch{
         width: 60vw;
     }
+    .navLogo{
+        border-radius: 5px;
+    }
   }
 
   @media only screen and (min-width: 993px) {
@@ -169,11 +172,10 @@ body{
     padding-bottom: 0.3%;
     /* height: 130px; */
     margin-left: 25px;
-    opacity: 0.9;
     /* width: 2000px; */
     margin-bottom:10px;
     margin-top: 10px;
-    opacity: 0.95;
+    opacity: 1;
 }
 .column-border{
     border-right-style: ridge;
@@ -223,102 +225,99 @@ body{
 /*-----------------------------INDEX PAGE--------------------------------*/
 
 
-.header{
-    position: absolute;
+.headerAlign{
+    display: table;
     width: 100%;
-    height: 74px;
-    left: 0px;
-    top: 0px;
+}
+.header{
+    height: 80px;
     background: linear-gradient(90.1deg, #A645F1 19.69%, #C54AFF 78.49%), #C54AFF;
-}
+    display: table-cell;
+    vertical-align: middle;
+}   
 
-.skill-board-title{
+.skillBoard{
     font-family: Palanquin Dark;
-    font-style: normal;
-    color: #fff;
-    font-size: 24px;
-    position: absolute;
-    left: 1.5rem;
-    top: 1.5rem;
-    width: 161px;
-    height: 42px;
+    color: white;
+    font-size: 20px;
+    margin-left: 20px;
 }
 
-.log-in{
-    color: #fff;
-    font-family: Padauk;
-    font-style: normal;
-    font-size: 24px;
-    font-weight: bold;
-    position: absolute;
-    right: 2.5rem;
-    top: 1.5rem;
-    width: 193px;
-    height: 38px;
+.login{
+    padding: 5px 20px;
+    float: right;
+}
+.signUp{
+    border-radius: 5px;
+    margin-right: 20px;
+    background-color: white;
+    padding: 5px 20px;
+    border: none;
+    outline: none;
+    float: right;
 }
 
-.sign-up-button{
-    background-color: #fff;
-    color: #A645F1 !important;
-    font-family: Padauk;
-    font-style: normal;
-    font-size: 18px;
-    font-weight: bold;
-    width: 98px;
-    height: 35px;
-    font-size: 18px;
-    position: absolute;
-    right: 1.5rem;
-    top: 1.2rem;
-    
-}
-
-
-.text-your-skill{
-    position: absolute;
-    top: 10rem;
-    left: 6.5rem;
-    margin-bottom: 10px;
+.yourSkill{
     font-family: Palanquin Dark;
-    font-style: normal;
     font-weight: 600;
     font-size: 50px;
-    line-height: 30px;
 }
 
-.text-goes-here{
-    position: absolute;
-    top: 13rem;
-    left: 6.5rem;
+.goesHere{
     font-family: Palanquin Dark;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
-    line-height: 30px;
+    line-height: 10px;
     color: #DB8EFF;
 }
 
-.arrow{
-    position: relative;
+.blankBox{
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-top: 25px;
+    height: 50vh;
+    width: 80%;
+    max-width: 400px;
+    background-color: rgb(214, 214, 214);
+    -webkit-box-shadow: 3px 6px 5px -1px rgba(0,0,0,0.36);
+    -moz-box-shadow: 3px 6px 5px -1px rgba(0,0,0,0.36);
+    box-shadow: 3px 6px 5px -1px rgba(0,0,0,0.36);
 }
 
-.arrow-icon{
-    color: #fff;
+.arrow{
+    display: flex;
+    justify-content: center;
+}
+
+.arrowIcon{
     position: absolute;
-    top: 39rem;
-    left: 50%; 
-    transform: scale(2.5);
+    bottom: 40px;
+    transform: scale(4);
+    color: white;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .blankBox{
+        margin-top: 40px;
+        height: 70vh;
+        width: 30vw;
+    }
+    .yourSkillText{
+        padding-top: 30px;
+        padding-left: 50px;
+    }
+    .skillBoard{
+        color: white;
+        font-size: 30px;
+
+    }
   }
 
-  .login-card{
-      position: absolute;
-      top: 5rem;
-      right: 4rem;
-      width: 322px;
-      height: 500px;
-      background-color: #FDE6FF;
-      border-radius: 20px;
-  }
+/*--------------------------END INDEX PAGE--------------------------------*/
+
+
 
   
 
