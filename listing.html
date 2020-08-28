@@ -18,29 +18,64 @@
     <!---------------------------------------->
     
 
-    <!--NAVIGATION BAR-->
-      <nav style="padding:6px 4vh 0vh 4vh;" class="navbar navbar-expand-md navbar-light">
-        <a class="navbar-brand" href="#"><img class="nav-logo" src="./assets/images/navbar_logo.png" alt="nav img"></a>
-        <form style="margin-left:30%;" class="form-inline text-center">
-            <input class="form-control mr-sm-2" id="searchbar" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn my-2 my-sm-0"  type="submit"><i class=" fas fa-search search-icon" ></i></button>
-        </form>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div style="margin-left:25%;" class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav mr-auto">
-              <li style="padding:0px 4vh 0vh 4vh;" class="nav-link"><i class="fas fa-filter"></i></li>
-              <li style="padding:0px 4vh 0vh 4vh;" class="nav-link"><i class="fas fa-sort"></i></li>
-              <li style="padding:0px 4vh 0vh 4vh;" class="nav-link"><i class="fas fa-sort"></i></li>
-          </ul>
+    <!------------TOP BAR--------------------------------------------->
+    <div class="listingTopBar sticky">
+      <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="#">
+              <img src="./assets/images/navbar_logo.png" class="navLogo">
+          </a>
+
+          <div class="collapse navbar-collapse hide" id="navbarSupportedContent">
+            <div class="listingSearchForm">
+              <form name="Form1"  action="#" method="get" class="listingSeachForm">
+                <input id="name" name="name" type="text" class="listingSearch" placeholder="Search">
+                <button class="listingSearchBtn">
+                  <ion-icon name="search-outline" style="transform: scale(1.5);"></ion-icon>
+                </button>
+              </form>
+            </div>
+
+            <a class="nav-link" href="#"><ion-icon size="large" name="funnel-outline"></ion-icon></span></a>
+            <a class="nav-link" href="#"><ion-icon size="large" name="barcode-outline"></ion-icon></a>
+            
+          </div>
+          
+          <span class="showOnCollapse ml-auto">
+            <span onclick="expandSearch()">
+              <ion-icon size="large" name="search-outline"></ion-icon>
+            </span>
+            <span onclick="expandOptions()">
+              <ion-icon size="large" name="caret-down-circle-outline"></ion-icon>
+            </span>
+          </span>
+          <ion-icon size="large" name="menu-outline"></ion-icon>
+        </nav>
+        <div id="collapsedSearch">
+          <div class="listingSearchForm">
+            <form name="Form1"  action="#" method="get" class="listingSeachForm">
+              <input id="name" name="name" type="text" class="listingSearch" placeholder="Search">
+              <button class="listingSearchBtn">
+                <ion-icon name="search-outline" style="transform: scale(1.5);"></ion-icon>
+              </button>
+            </form> <br>
+            <span onclick="closeSearch()">
+              <ion-icon name="close-circle-outline" style="transform: scale(1.5); color: red;"></ion-icon>
+            </span>
+          </div>
         </div>
-      </nav>
+        <div id="collapsedOptions">
+          <span><ion-icon size="large" name="funnel-outline"></ion-icon></span>
+          <span><ion-icon size="large" name="barcode-outline"></ion-icon></span>
+          <span onclick="closeOptions()">
+            <ion-icon name="close-circle-outline" size="large" style="color: red"></ion-icon>
+          </span>
+        </div>
+    </div>
     <!------------------END TOP-BAR--------------------------------------->
 
 
 
-    <!--FOR PROFILE CARDS, DELETE EVERYHING BELOW THIS TILL THE END COMMENT--------->
+    <!----------------------PROFILE CARDS--------->
     <div class="profile-page">
     <div class="container-fluid round-border border" id="i-container">
         
@@ -82,9 +117,9 @@
               View Profile
             </button> 
         </div> 
-        </div>
+    </div>
         
-      </div>
+    </div>
 
       <!-- 2nd card -->
       <div class="container-fluid round-border border" id="i-container">
@@ -271,9 +306,9 @@
       </div>
     </div>
     <!------------------END CARDS----------------->
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-
-    <!--CHECK THE CSS CLASS FOR #blob to know how it stays fixed in the bottom of the page even on scrolling-->
+    <!--BLOB-->
     <div class="blob">
         <img src="./assets/images/blob.png" id="blob">
     </div>
@@ -281,6 +316,7 @@
     
 
     <!--NECESSARY SCRIPTS-->
+    <script src="./js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
