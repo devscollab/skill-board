@@ -163,7 +163,7 @@ body{
     text-align: center;
     margin: 0 auto;
     margin-right: -50%;
-    background-color: #e7e7e7;
+    background-color: #eeeeee;
     border: solid;
     border-color: black;
     /* padding-left: 3%; */
@@ -173,7 +173,7 @@ body{
     /* height: 130px; */
     margin-left: 25px;
     /* width: 2000px; */
-    margin-bottom:10px;
+    margin-bottom:15px;
     margin-top: 10px;
     opacity: 1;
 }
@@ -189,11 +189,9 @@ body{
     width: 100%;
     height: auto;
     display: flex;
-  justify-content: space-between;
+    justify-content: space-around;
   /* margin-top: 4%; */
-  padding-top: 2%;
-  margin: auto;
-
+    margin: auto;
 }
 .checked{
     color: orange;
@@ -214,9 +212,42 @@ body{
     border-radius: 3px;
     color: white;
     border-style: none;
-    width: 140px;
-    height: 43px;
+    padding: 5px 15px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cardTextCenter{
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.student{
+    font-size: small;
+}
+
+@media only screen and (max-width: 422px) {
+    .mobile{
+        height: 20px;
+        width: 100%;
+    }
+    .card-button{
+        margin-right: 10px;
+    }
+    #i-container{
+        margin-left: auto;
+        margin-right: auto;
+        width: 90vw;
+    }
+
+  }
+.tsSkill{
+    font-size: small;
+    font-weight: bold;
+}
+
+.cardPadding{
+    padding: 15px 0;
 }
 
 /*-----------------------------END LISITNG PAGE--------------------------*/
