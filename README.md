@@ -46,4 +46,4 @@ If there is any issues in using the skill board, contact us via email at [devsco
 
 For reporting bugs or requesting features, create a new issue in this repository with the proper template.
 
-Maintained by - [@tejasmorkar](https://github.com/tejasmorkar)
+Maintained by - [@tejasmorkar](https://github.com/tejasmorkar) and [@suyashsonawane](https://github.com/suyashsonawane)
