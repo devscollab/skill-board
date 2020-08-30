@@ -2,7 +2,7 @@
 
 ![GitHub](https://img.shields.io/github/license/devscollab/skill-board) ![Maintenance](https://img.shields.io/maintenance/yes/2020) ![GitHub last commit](https://img.shields.io/github/last-commit/devscollab/skill-board) ![GitHub contributors](https://img.shields.io/github/contributors/devscollab/skill-board)
 
-> Top Contributor - [bhavansh](https://github.com/bhavansh)
+> Top Contributor - [adityamahajan-io](https://github.com/adityamahajan-io)
 
 ![Skill Board](assets/images/logo.png) <!-- .element height="30%" width="30%" -->
 
