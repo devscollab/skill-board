@@ -49,8 +49,12 @@ body{
     margin-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
-    width: 95%;
+    width: 100%;
 }
+
+.listingTopBar .navbar{
+    padding: .5rem 3rem;  
+} 
 
   .navLogo{
       border-radius: 12px;
