@@ -8,7 +8,7 @@ $(document).ready(() => {
     getData()
     .then(data => {
         data.docs.forEach(student => {  
-            console.log(student)
+            // console.log(student)
             $('#cards-container').append(`
             <div class="container-fluid round-border border" id="i-container">
               <div class="row cardPadding">
