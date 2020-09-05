@@ -22,8 +22,8 @@ $(document).ready(() => {
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star"></span><br>
-                    <span>Third Year Student</span><br>
-                    <span>Comp Dept</span>
+                    <span>${student.Personal.year}</span><br>
+                    <span>${student.Personal.department}</span>
                   </div>
                 </div>
                 <div class="mobile"></div>
