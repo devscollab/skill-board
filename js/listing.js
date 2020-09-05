@@ -8,6 +8,7 @@ $(document).ready(() => {
     getData()
     .then(data => {
         data.docs.forEach(student => {  
+          // console.log(student.skills)
             $('#cards-container').append(`
             <div class="container-fluid round-border border" id="i-container">
               <div class="row cardPadding">
@@ -16,25 +17,25 @@ $(document).ready(() => {
                 </div>
                 <div class="col sm-12 cardTextCenter student">
                   <div>
-                    <h4>${student.Personal.name}</h4>
+                    <h4>${student.personal.name}</h4>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star"></span><br>
-                    <span>Third Year Student</span><br>
-                    <span>Comp Dept</span>
+                    <span>${student.personal.year}</span><br>
+                    <span>${student.personal.department}</span>
                   </div>
                 </div>
                 <div class="mobile"></div>
                 <div class="col sm-12 cardTextCenter">
                   <span class="tsSkill">TOP SKILLS</span>
-                  <h4>Machine Learning</h4>
+                  <h4>${student.skills.primaryskill}</h4>
                   <a style="font-size: small;">PROJECT LINK</a>
                 </div>
                 <div class="col sm-12 cardTextCenter">
                   <span class="tsSkill">SECONDARY SKILL</span>
-                  <h4>Machine Learning</h4>
+                  <h4>${student.skills.secondaryskill}</h4>
                   <a style="font-size: small;">PROJECT LINK</a>
                 </div>
                 <div class="mobile"></div>
