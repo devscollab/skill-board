@@ -39,7 +39,8 @@ function adduser(use1r){
     var user = {
         email : use1r.email.value,
         password : use1r.pass.value,
-        Personal : {
+   
+        personal : {
             name : use1r.name.value,
             college : use1r.college.value,
             deptartment : use1r.college.value,
@@ -64,7 +65,8 @@ function adduser(use1r){
             cgpa: use1r.cgpa.value
         },
         rating:use1r.rating.value,
-        Optionals: {
+  
+        optionals: {
             introduction: use1r.introduction.value,
             gender: use1r.gender.value,
             age : use1r.age.value,
