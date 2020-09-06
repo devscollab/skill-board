@@ -1,0 +1,1 @@
+const baseurl = "https://skboard.herokuapp.com/"
