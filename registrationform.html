@@ -2,101 +2,105 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Registration Page</title>
-  <meta content="" name="descriptison">
-  <meta content="" name="keywords">
+    <title>Registration Page</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
 
 </head>
 
-
-<form id="registrationform" enctype="multipart/form-data" method="post" onsubmit="return adduser(this);">
-  <div>
-    <br><br><b>PRESONAL</b><br><br>
-
-    First name: <input type="text" name="name" placeholder="Name" required/><br>
-    Email: <input type="email" name="email" placeholder="Email" required /><br>
-    Password: <input type="password" name="pass" placeholder="Password" required /><br>
-    College: <input type="text" name="college" placeholder="College name" required /><br>
-    Department: <input type="text" name="department" placeholder="Branch" required /><br>
-    Year: <input type="text" name="year" placeholder="Year" required /><br>
-    Division: <input type="text" name="division" placeholder="Div." required /><br>
-    Roll No.: <input type="text" name="rollno" placeholder="Eoll No." required/><br>
-  </div>
-
-  <div>    
-    <br><br><b>OPTIONALS</b><br><br>
-    Intro : <br>
-    <textarea name = "introduction" placeholder="Introduce Yourself" rows="4" style="width: 90%;"></textarea>
-    <br>
-    <input type="radio" id="male" name="gender" value="male">
-    <label for="male">Male</label><br>
-    <input type="radio" id="female" name="gender" value="female">
-    <label for="female">Female</label><br>
-    <input type="radio" id="other" name="gender" value="other">
-    <label for="other">Other</label>
-
-    <br>
-    Age.: <input type="number" name="age" placeholder="Age" required/><br><br>
-
-    Languages known :  <div id="languageform">
-      Language 1 : <input type="text" name="languages[]"><br><br>
-          </div>          
-    <input type="button" value="Add another Language" onClick="addlanguage('languageform');">
-
-    <button onclick="loglang()">Log Languages</button>
-    <br><br>
-
-    mother Tongue: <input type="text" name="mothertongue" placeholder="Mother Tongue" required/><br>
-  </div>
-
-  <div>
-    <br><br><b>SKILL SECTION</b><br><br>
-
-    Skills :  <div id="skillform">
-                    Skill 1 : <input type="text" name="skills[]"><br>
-                    Link To the Project : <input type="text" name="skilllinks[]"> <br><br>
-              </div>
-              <input type="button" value="Add another skill" onClick="addskill('skillform');">
-
-              <button onclick="logskills()">Log Skills</button>
-    
-    <br><br>
-    Top Skill :  <input type="text" name="topskill"><br>
-    Primary Skill :  <input type="text" name="primaryskill"><br>
-    Secondary Skill :  <input type="text" name="secondaryskill"><br>
-    CGPA :  <input type="number" name="cgpa" step="0.1" max='10' min='0'><br>
-  </div>
-
-  <div>
-    <br><br><b>RATING</b><br><br>
-    Rate Yourself between 0 to 5 : <input type="number" step="0.1" min="0" max='5' name="rating" />
-  </div>
-
-  <div>
-    <br><br><b>SOCIAL</b><br><br>
-
-    Phone :  <input type="number" name="phone"><br>
-    isWhat'sapp : <input type="checkbox" name = "iswhatsapp"/>
-    <br><br>
-    <b>Link to</b> <br>
-    Linkden Profile :  <input type="text" name="linkden"><br>
-    Github Profile :  <input type="text" name="github"><br>
-    Personal website :  <input type="text" name="personalsite"><br>
-    Resume :  <input type="text" name="resume"><br>
-
-  </div>
-    
-  
-  <br><br>
-  <input type="submit" name="submit" value="Submit">
-  </form>
-
-  
-
+<body>
+    <form>
+        <div>
+            <h2>Credentials</h2>
+            <label>email:</label>
+            <input type="email" id="email">
+            <br><br>
+            <label>password:</label>
+            <input type="password" id="password">
+            <br><br>
+            <h2>Personal</h2>
+            <label>Name:</label>
+            <input type="text" id="name">
+            <br><br>
+            <label>college:</label>
+            <input type="text" id="college">
+            <br><br>
+            <label>department:</label>
+            <input type="text" id="department">
+            <br><br>
+            <label>year:</label>
+            <input type="text" id="year">
+            <br><br>
+            <label>division:</label>
+            <input type="text" id="division">
+            <br><br>
+            <label>rollno:</label>
+            <input type="text" id="rollno">
+        </div><br><br>
+        <div>
+            <h2>Social</h2>
+            <label>phone:</label>
+            <input type="tel" id="phone">
+            <br><br>
+            <label>is it a whatsapp number?:</label>
+            <input type="checkbox" id="isWhatsapp">
+            <br><br>
+            <label>LinkedIn:</label>
+            <input type="url" id="linkedin">
+            <br><br>
+            <label>Github:</label>
+            <input type="url" id="github">
+            <br><br>
+            <label>Personal website:</label>
+            <input type="url" id="personalWebsite">
+            <br><br>
+            <label>resume:</label>
+            <input type="url" id="resume">
+        </div><br><br>
+        <div>
+            <h2>Skills</h2>
+            <label>Primary Skill:</label>
+            <input type="text" id="primarySkill">
+            <br><br>
+            <label>Secondary Skill:</label>
+            <input type="text" id="secondarySkill">
+            <br><br>
+            <label>Other Skills:</label>
+            <input type="text" id="otherskills">
+            <br><br>
+            <label>Projects:</label>
+            <input type="url" id="project">
+            <br><br>
+            <label>SGPA:</label>
+            <input type="number" id="sgpa">
+        </div><br><br>
+        <div>
+            <h2>Other Details</h2>
+            <label>Bio:</label>
+            <input type="text" id="introduction">
+            <br><br>
+            <label>Gender:</label>
+            <select name="gender" id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <br><br>
+            <label>Age:</label>
+            <input type="number" id="age">
+            <br><br>
+            <label>Mother tongue:</label>
+            <input type="text" id="motherTongue">
+            <br><br>
+            <label>Known Languages:</label>
+            <input type="text" id="knownLanguage">
+        </div><br><br>
+    </form>
+    <button onclick="register()">Submit</button>
+</body>
 <script src="./js/registrationform.js"></script>
-
 
 </html>
