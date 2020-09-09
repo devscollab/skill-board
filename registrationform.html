@@ -11,19 +11,18 @@
 
 </head>
 
-
-<form id="registrationform" enctype="multipart/form-data" method="post" onsubmit="return adduser(this);">
+<form id="registrationform" enctype="multipart/form-data" method="post" >
   <div>
     <br><br><b>PRESONAL</b><br><br>
 
-    First name: <input type="text" name="name" placeholder="Name" required/><br>
-    Email: <input type="email" name="email" placeholder="Email" required /><br>
-    Password: <input type="password" name="pass" placeholder="Password" required /><br>
-    College: <input type="text" name="college" placeholder="College name" required /><br>
-    Department: <input type="text" name="department" placeholder="Branch" required /><br>
-    Year: <input type="text" name="year" placeholder="Year" required /><br>
-    Division: <input type="text" name="division" placeholder="Div." required /><br>
-    Roll No.: <input type="text" name="rollno" placeholder="Eoll No." required/><br>
+    First name: <input type="text" name="name" placeholder="Name" required /><br>
+    Email: <input type="email" name="email" placeholder="Email"  /><br>
+    Password: <input type="password" name="pass" placeholder="Password"  /><br>
+    College: <input type="text" name="college" placeholder="College name"  /><br>
+    Department: <input type="text" name="department" placeholder="Branch"  /><br>
+    Year: <input type="text" name="year" placeholder="Year"  /><br>
+    Division: <input type="text" name="division" placeholder="Div."  /><br>
+    Roll No.: <input type="text" name="rollno" placeholder="Eoll No." /><br>
   </div>
 
   <div>    
@@ -39,7 +38,7 @@
     <label for="other">Other</label>
 
     <br>
-    Age.: <input type="number" name="age" placeholder="Age" required/><br><br>
+    Age.: <input type="number" name="age" placeholder="Age" /><br><br>
 
     Languages known :  <div id="languageform">
       Language 1 : <input type="text" name="languages[]"><br><br>
@@ -49,7 +48,7 @@
     <button onclick="loglang()">Log Languages</button>
     <br><br>
 
-    mother Tongue: <input type="text" name="mothertongue" placeholder="Mother Tongue" required/><br>
+    mother Tongue: <input type="text" name="mothertongue" placeholder="Mother Tongue" /><br>
   </div>
 
   <div>
