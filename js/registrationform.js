@@ -76,6 +76,11 @@ registrationform.addEventListener('submit',  function(e) {
         languagearr.push(languages[i].value)      
     }
     
+    var iswhatsapp = false;
+    if (this.iswhatsapp.value === "on") {
+        iswhatsapp = true;
+    }
+    
 
     const use1r = new FormData(this);
     // Object To be posted
@@ -85,7 +90,7 @@ registrationform.addEventListener('submit',  function(e) {
         "personal" : {
             "name" : this.name.value,
             "college" : this.college.value,
-            "deptartment" : this.college.value,
+            "department" : this.college.value,
             "year" : this.year.value,
             "division" : this.division.value,
             "rollno" : this.rollno.value,
@@ -96,7 +101,7 @@ registrationform.addEventListener('submit',  function(e) {
             "github":this.github.value,
             "personalwebsite": this.personalsite.value,
             "resume": this.resume.value,
-            "iswhatsaap": this.iswhatsapp.value
+            "iswhatsapp": iswhatsapp
         }, 
         "skills":{
             "skills" : skillarr,
@@ -134,6 +139,6 @@ registrationform.addEventListener('submit',  function(e) {
             console.log("Response =>" + JSON.stringify(res));
            
         })
-        .catch(console.log("Failed to get git data"))
+        .catch(console.log(""))
 
 })
