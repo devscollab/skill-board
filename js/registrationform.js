@@ -74,10 +74,10 @@ async function register() {
     languages_known: ['marathi', 'english'],
   };
 
-  //create user object
-
+  // fetching github metaData 
   const github_metadata_object =  await getGithubData();
   
+  //create user object
   user = {
     email: email,
     password: password,
@@ -89,27 +89,24 @@ async function register() {
       github_metadata_object:github_metadata_object
     },
   };
-  //console.log(user)
 
-  let url = "http://localhost:3000/api/register/student";
+  // url to send post req
+  let url = "https://skboard.herokuapp.com/api/register/student";
 
   const response = await postData(url,user);
-  console.log(response);
+  console.log("Response =>" + response);
 }
 
+// Function to fetch github data
 async function getGithubData(user){
   const url =  `https://api.github.com/users/${social.github.substr(social.github.lastIndexOf('/') + 1)}`
-  console.log(url);
   const data =await fetch(url);
   const json = await data.json();
   return json
 }
 
+// Function to post data
 async function postData(url = "", data) {
-
-  console.log(data);
-  
-
   const response = await fetch(url, {
     method: "POST", // *GET, POST, PUT, DELETE, etc.
     mode: "cors", // no-cors, *cors, same-origin
@@ -122,6 +119,5 @@ async function postData(url = "", data) {
     //body: body // body data type must match "Content-Type" header
     body: JSON.stringify(data),
   });
-  console.log('Response');
   return response.json(); // parses JSON response into native JavaScript objects
 }
