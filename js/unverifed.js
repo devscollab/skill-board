@@ -50,12 +50,13 @@ $(document).ready(() => {
                     &nbsp;View Profile
                 </button>
                 </a>
-                
-                <button type="button" class="card-button btn-success" onclick=verifyProfile("${student._id}")> 
+                <button type="button" class="card-button btn-success" onclick=verifyProfile("${student._id}") style="margin-bottom: 5px"> 
                     Verify Profile   
                 </button>
-                
-
+                <br>
+                <button type="button" class="card-button btn-danger" onclick=deleteProfile("${student._id}")> 
+                  Delete   
+                </button>
               </div>
               <div class="mobile"></div> 
             </div>
