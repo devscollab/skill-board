@@ -14,3 +14,18 @@ function verifyProfile(user) {
     location.reload()
 }
 
+function deleteProfile(user){
+    const url = "https://skboard.herokuapp.com/api/student/delete/" +user
+    console.log(url) 
+    fetch(url, { 
+        method: "DELETE", 
+        body: null,
+        headers: { 
+            "Content-type": "application/json;"
+        } 
+    }) 
+    .then(response => response.json()) 
+    .then(json => console.log(json));
+    alert("deleted" +user);
+    location.reload()
+}

@@ -50,6 +50,10 @@ $(document).ready(() => {
                     View Profile
                 </button>
                 </a>
+                <br>
+                <button type="button" class="card-button btn-danger" onclick=deleteProfile("${student._id}") style="margin-top: 5px"> 
+                  Delete   
+                </button>
 
               </div>
               <div class="mobile"></div> 

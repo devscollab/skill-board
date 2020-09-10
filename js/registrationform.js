@@ -61,8 +61,8 @@ async function register() {
   skills = {
     primaryskill: primaryskill,
     secondaryskill: secondaryskill,
-    skill: ["nodejs", "java"],
-    projectsforskills: ["https://github.com/Aditya-Dawadikar", "https://github.com/Aditya-Dawadikar"],
+    skill: skillArray,
+    projectsforskills: projectArray,
     cgpa: cgpa,
   };
 
@@ -95,6 +95,8 @@ async function register() {
 
   const response = await postData(url,user);
   console.log("Response =>" + response);
+  alert("Your account has been submitted. Admin will verify your submission shortly")
+  location.reload()
 }
 
 // Function to fetch github data
