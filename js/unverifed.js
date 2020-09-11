@@ -45,7 +45,7 @@ $(document).ready(() => {
                   <ion-icon name="logo-whatsapp" style="transform: scale(2);"></ion-icon>
                 </div>
                 <div class="col sm-6 align-self-center mx-auto"> 
-                <a href="https://skboard.herokuapp.com/api/student/${student._id}">
+                <a href="./viewProfile.html?${student._id}">
                 <button type="button" class="card-button" style="margin-bottom: 5px"> 
                     &nbsp;View Profile
                 </button>
