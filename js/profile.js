@@ -17,13 +17,13 @@ $(document).ready(() => {
         $("#profile").append(`
         <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-md-4 leftSide">
+            <div class="col-12 col-md-4 leftSide" style="padding: 20px 40px;">
                 <div class="leftSideWrapper">
                     <img class="profileImg" src="https://cdn0.iconfinder.com/data/icons/social-media-network-4/48/male_avatar-512.png"/>
                     <div class="centerElem">
                         <h2>${user.personal.name}</h2>
                         <a href ="${user.social.resume}">
-                        <button class="btn" style="margin-top: 5px; background-color: rgb(0, 255, 64); padding: 10px 20px;">
+                        <button class="btn" style="margin-top: 15px; background-color: rgb(77, 255, 77); padding: 10px 20px;">
                             Download Full Resume
                         </button>
                         </a>

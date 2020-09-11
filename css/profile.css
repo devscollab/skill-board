@@ -14,7 +14,7 @@
   display: block;
   margin: 30px auto;
   max-width: 80%;
-  height: 30vh;
+  max-height: 200px;
 }
 
 .centerElem{
@@ -22,8 +22,11 @@
 }
 
 .socialsList{
+  font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));
   margin: 0 auto;
 }
+
+.lef
 
 .leftSideWrapper{
   padding: 0 40px;
@@ -44,8 +47,8 @@
 }
 
 .leftSide{
-  padding: 0;
-  background-color: rgb(229, 255, 217);
+  min-height: 100vh;
+  background-color: rgb(255, 255, 200);
 }
 
 .bio{
