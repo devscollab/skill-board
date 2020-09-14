@@ -104,7 +104,7 @@ registrationform.addEventListener('submit',  function(e) {
             "iswhatsapp": iswhatsapp
         }, 
         "skills":{
-            "skills" : skillarr,
+            "skill" : skillarr,
             "projectsforskills" : projectsforskills,
             "topskill": this.topskill.value,
             "primaryskill" : this.primaryskill.value,
