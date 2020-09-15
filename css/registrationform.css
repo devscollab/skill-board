@@ -60,8 +60,7 @@ button  {
 
 button:hover  {
 	cursor:  pointer;
-	background-color:  black;
-	color:  white;
+	color:  purple;
 }
 
 button:disabled:hover  {
@@ -87,3 +86,57 @@ button:disabled:hover  {
     display: block;
 }
 
+.regcard{
+	background: rgb(179, 177, 177);
+}
+.form-control1 {
+    height: 37px;
+    border: none;
+    border-bottom: 2px solid #e6e6e6;
+    width: 100%;
+    color: #666;
+}
+.form-control1 :focus {
+    height: 37px;
+    border: none;
+    border-bottom: 2px solid #e6e6e6;
+    width: 100%;
+    color: #666;
+}
+
+input {
+	-webkit-transition: width .35s ease-in-out;
+	transition: width .35s ease-in-out;
+	background: none;
+  }
+
+input:focus {
+	border: none;
+  }
+
+.langlabel{
+	padding-top: 15px;
+}
+.skillrow{
+	padding-left: 15px;
+	margin-top: 15px;
+}
+.label{
+	margin-bottom: -35px;
+}
+#previousBtn{
+	float: right;
+	width: 100px;
+	margin-right: 5%;
+}
+#nextBtn{
+	float: left;
+	width: 100px;	
+	margin-left: 5%;
+}
+.btnnxt{
+	background: none;
+	border: none;
+	margin-top: 55px;
+	font-size: 3rem;
+}

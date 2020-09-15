@@ -4,11 +4,18 @@
 var counterskill = 1;
 function addskill(divName){
     var newdiv = document.createElement('div');
-    var newlink = document.createElement('div');
-    newdiv.innerHTML = "Skill " + (counterskill + 1) + " <input type='text' name='skills[]'>";
-    newlink.innerHTML = " Link To the Project " + " <input type='text' name='skilllinks[]'><br><br>";
+    newdiv.classList.add('row');
+    newdiv.classList.add('skillrow');
+    newdiv.innerHTML = `<div class=" col-md-6">
+                            <label class="label">Skill ${counterskill+1}</label>
+                            <input type="text" name="skills[]" class="form-control1">
+                        </div>
+                        <div class=" col-md-6">
+                            <label class="label">Link To the Project</label>
+                            <input type="text" class="form-control1" name="skilllinks[] placeholder="https://" >
+                        </div>
+                    `;
     document.getElementById(divName).appendChild(newdiv);
-    document.getElementById(divName).appendChild(newlink);
     counterskill++;    
 }
 
@@ -18,7 +25,7 @@ function addskill(divName){
 var counterlanguage = 1;
 function addlanguage(divName){
     var newdiv = document.createElement('div');
-    newdiv.innerHTML = "Language " + (counterlanguage + 1) + " : <input type='text' name='languages[]'>";
+    newdiv.innerHTML = `<label class= 'langlabel'>Language ${counterlanguage+1} : </label><input type='text' class='form-control1 col-md-8 mb-2' style='margin-left:15px' name='languages[]'>`;
     document.getElementById(divName).appendChild(newdiv);
     counterlanguage++;    
 }
@@ -124,19 +131,21 @@ registrationform.addEventListener('submit',  function(e) {
     };
 
 
-    githublink = `https://api.github.com/users/${this.github.value.substr(this.github.value.lastIndexOf('/') + 1)}`
- 
+    githublink = `https://api.github.com/users/${this.github.value.substr(this.github.value.lastIndexOf('/') + 1)}`; //Github api URL
+    
+    // Fetch api call to github
     fetch(githublink)
         .then(response=>response.json())
         .then(response=>{
             user["metaData"]["github_metadata_object"] = response;
         })
+        // If github account exist then push student to database
         .then(async (response) => {
 
-            let url = "https://skboard.herokuapp.com/api/register/student";
+            let url = "https://skboard.herokuapp.com/api/register/student"; // URL for skboard api
 
-            const res = await postData(url, user);
-            console.log("Response =>" + JSON.stringify(res));
+            const res = await postData(url, user); // Post function
+            console.log("Response =>" + JSON.stringify(res));   // Log the response
            
         })
         .catch(console.log(""))

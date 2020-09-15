@@ -1,6 +1,5 @@
 const  previousBtn  =  document.getElementById('previousBtn');
 const  nextBtn  =  document.getElementById('nextBtn');
-const  finishBtn  =  document.getElementById('finishBtn');
 const  content  =  document.getElementById('content');
 const  bullets  =  [...document.querySelectorAll('.bullet')];
 const formfields = [...document.querySelectorAll('.part')];
@@ -17,7 +16,6 @@ nextBtn.addEventListener('click',  ()  =>  {
     }
 	if  (currentStep  ===  MAX_STEPS)  {
         nextBtn.disabled  =  true;
-		finishBtn.disabled  =  false;
 	}
     formfields[currentStep -1].classList.remove('hide');
 });
@@ -28,7 +26,6 @@ previousBtn.addEventListener('click',  ()  =>  {
     formfields[currentStep  -  1].classList.add('hide');
 	currentStep  -=  1;
 	nextBtn.disabled  =  false;
-    finishBtn.disabled  =  true;
     if (currentStep  !==  MAX_STEPS) {
         formfields[currentStep  - 1].classList.remove('hide');
     }
@@ -37,9 +34,6 @@ previousBtn.addEventListener('click',  ()  =>  {
 	}
 });
 
-finishBtn.addEventListener('click',  ()  =>  {
-	location.reload();
-});
-
+previousBtn.disabled  =  true;
 
 
