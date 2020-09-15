@@ -38,18 +38,17 @@ function addlanguage(divName){
 
 async function postData(url , data) {
     const response = await fetch(url, {
-      method: "POST", // *GET, POST, PUT, DELETE, etc.
-      mode: "cors", // no-cors, *cors, same-origin
-      cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+      method: "POST",       // *GET, POST, PUT, DELETE, etc.
+      mode: "cors",         // no-cors, *cors, same-origin
+      cache: "no-cache",    // *default, no-cache, reload, force-cache, only-if-cached
       //credentials: 'same-origin', // include, *same-origin, omit
       headers: {
         "Content-Type": "application/json",
       },
-      referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-      //body: body // body data type must match "Content-Type" header
+      referrerPolicy: "no-referrer",    // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
       body: JSON.stringify(data),
     });
-    return response.json(); // parses JSON response into native JavaScript objects
+    return response.json();     // parses JSON response into native JavaScript objects
   }
 
 
@@ -63,10 +62,12 @@ const registrationform = document.getElementById("registrationform")
 
 // Handle form events such as onsubmit
 // Event listner
+
 registrationform.addEventListener('submit',  function(e) {
     e.preventDefault();
 
     // Get the skills and links to projects array
+
     skillarr = [];
     projectsforskills = []
     var skill = document.getElementsByName('skills[]'); 
@@ -77,6 +78,7 @@ registrationform.addEventListener('submit',  function(e) {
     }
 
     // Get the languages array
+
     languagearr = []
     var languages = document.getElementsByName('languages[]'); 
     for (var i = 0; i < languages.length; i++) { 
@@ -90,6 +92,7 @@ registrationform.addEventListener('submit',  function(e) {
     
 
     const use1r = new FormData(this);
+
     // Object To be posted
     var user = {
         "email" : this.email.value,
@@ -131,21 +134,24 @@ registrationform.addEventListener('submit',  function(e) {
     };
 
 
-    githublink = `https://api.github.com/users/${this.github.value.substr(this.github.value.lastIndexOf('/') + 1)}`; //Github api URL
+    githublink = `https://api.github.com/users/${this.github.value.substr(this.github.value.lastIndexOf('/') + 1)}`;    //Github api URL
     
     // Fetch api call to github
+
     fetch(githublink)
         .then(response=>response.json())
         .then(response=>{
             user["metaData"]["github_metadata_object"] = response;
         })
+
         // If github account exist then push student to database
+
         .then(async (response) => {
 
-            let url = "https://skboard.herokuapp.com/api/register/student"; // URL for skboard api
+            let url = "https://skboard.herokuapp.com/api/register/student";     // URL for skboard api
 
-            const res = await postData(url, user); // Post function
-            console.log("Response =>" + JSON.stringify(res));   // Log the response
+            const res = await postData(url, user);                  // Post function
+            console.log("Response =>" + JSON.stringify(res));       // Log the response
            
         })
         .catch(console.log(""))
