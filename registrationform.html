@@ -142,15 +142,11 @@
                       Languages known 
                       <div id="languageform" >
                         <label class= "langlabel">Language 1 : </label>
-                        <input type="text" class="form-control1 col-md-8 mb-2" style='margin-left:15px' name="languages[] ">
+                        <input type="text" class="form-control1 col-md-8 mb-2" style='margin-left:15px' name="languages[]">
                       </div>          
                     <input type="button" class="addfieldbutton" value="Add another Language" onClick="addlanguage('languageform');">
                   </div>
 
-                  <div class = "col-md-6 mb-4">
-                    <label class="sr-only" >Mother Tongue </label>
-                    <input class="form-control1" name="mothertongue" placeholder="Mother Tongue" />
-                  </div>
 
                 </div>
                 
@@ -173,6 +169,17 @@
 
                 <div class="row">
 
+                  
+                  <div class = "col-md-6 mb-4">
+                    <label class="sr-only" >Primary Skill </label>
+                    <input class="form-control1" type="text" name="primaryskill" placeholder="Primary Skill" required />
+                  </div>
+
+                  <div class = "col-md-6 mb-4">
+                    <label class="sr-only" >Secondary Skill </label>
+                    <input class="form-control1" type="text"  name="secondaryskill" placeholder="Secondary Skill"  />
+                  </div>
+
                   <div class = "col-md-12 mb-4">
 
                     <div id="skillform" class="row">
@@ -190,21 +197,6 @@
 
                     <input type="button" class="addfieldbutton" value="Add another skill" onClick="addskill('skillform');">
 
-                  </div>
-
-                  <div class = "col-md-12 mb-4" style="margin-top: 10px;">
-                    <label class="sr-only">Top Skill </label>
-                      <input class="form-control1" type="text"  name="topskill" placeholder="Top Skill" required>
-                  </div>
-
-                  <div class = "col-md-6 mb-4">
-                    <label class="sr-only" >Primary Skill </label>
-                    <input class="form-control1" type="text" name="primaryskill" placeholder="Primary Skill" required />
-                  </div>
-
-                  <div class = "col-md-6 mb-4">
-                    <label class="sr-only" >Secondary Skill </label>
-                    <input class="form-control1" type="text"  name="secondaryskill" placeholder="Secondary Skill"  />
                   </div>
 
                   <div class = "col-md-12 mb-4" style="margin-top: 10px;">
