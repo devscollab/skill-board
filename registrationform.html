@@ -13,20 +13,20 @@
 
 <body>
   <div class="container">
-    <div id="stepProgressBar">
-      <div class="step">
+    <div id="stepProgressBar" class="row">
+      <div class="step col-3">
         <p class="step-text">Personal</p>
         <div class="bullet">1</div>
       </div>
-      <div class="step">
+      <div class="step col-3">
         <p class="step-text">Optionals</p>
         <div class="bullet">2</div>
       </div>
-      <div class="step">
+      <div class="step col-3">
         <p class="step-text">Skills</p>
         <div class="bullet">3</div>
       </div>
-      <div class="step">
+      <div class="step col-3">
         <p class="step-text">Social</p>
         <div class="bullet ">4</div>
       </div>
@@ -161,7 +161,7 @@
                         <label class= "langlabel">Language 1 : </label>
                         <input type="text" class="form-control1 col-md-8 mb-2" style='margin-left:15px' name="languages[] ">
                       </div>          
-                    <input type="button" value="Add another Language" onClick="addlanguage('languageform');">
+                    <input type="button" class="addfieldbutton" value="Add another Language" onClick="addlanguage('languageform');">
                   </div>
 
                   <div class = "col-md-6 mb-4">
@@ -231,7 +231,7 @@
                       </div>
                     </div>
 
-                    <input type="button" value="Add another skill" onClick="addskill('skillform');">
+                    <input type="button" class="addfieldbutton" value="Add another skill" onClick="addskill('skillform');">
 
                   </div>
 
@@ -350,7 +350,7 @@
 
                   <div class = "col-md-12 mb-4" style="margin-top: 20px;">
                     <center>
-                      <input type="submit" name="submit" value="Submit" style="width: 60%;">
+                      <input type="submit" class="submitform" name="submit" value="Submit" style="width: 60%;">
                     </center>
                   </div>
 

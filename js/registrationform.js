@@ -12,7 +12,7 @@ function addskill(divName){
                         </div>
                         <div class=" col-md-6">
                             <label class="label">Link To the Project</label>
-                            <input type="text" class="form-control1" name="skilllinks[] placeholder="https://" >
+                            <input type="text" class="form-control1" name="skilllinks[]"  placeholder="https://" >
                         </div>
                     `;
     document.getElementById(divName).appendChild(newdiv);
