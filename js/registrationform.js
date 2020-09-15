@@ -97,7 +97,7 @@ registrationform.addEventListener('submit',  function(e) {
         "personal" : {
             "name" : this.name.value,
             "college" : this.college.value,
-            "department" : this.college.value,
+            "department" : this.department.value,
             "year" : this.year.value,
             "division" : this.division.value,
             "rollno" : this.rollno.value,
@@ -113,7 +113,6 @@ registrationform.addEventListener('submit',  function(e) {
         "skills":{
             "skill" : skillarr,
             "projectsforskills" : projectsforskills,
-            "topskill": this.topskill.value,
             "primaryskill" : this.primaryskill.value,
             "secondaryskill" : this.secondaryskill.value,
             "cgpa": this.cgpa.value
@@ -123,7 +122,6 @@ registrationform.addEventListener('submit',  function(e) {
             "introduction": this.introduction.value,
             "gender": this.gender.value,
             "age" : this.age.value,
-            "mother_tongue": this.mothertongue.value,
             "languages_known" : languagearr
         },
         "metaData":{
