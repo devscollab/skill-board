@@ -63,37 +63,37 @@
 
                     <div class = "col-md-6 mb-4 ">
                       <label class="sr-only" >Email </label>
-                      <input class="form-control1" type="email" name="email" placeholder="Email"  />
+                      <input class="form-control1" type="email" name="email" placeholder="Email" required />
                     </div>
 
                     <div class = "col-md-6 mb-4">
                       <label class="sr-only">Password </label>
-                        <input type="password" class="form-control1" name="pass" placeholder="Password"  />
+                        <input type="password" class="form-control1" name="pass" placeholder="Password" required />
                     </div>
 
                     <div class = "col-md-6 mb-4">
                       <label class="sr-only" >College Name </label>
-                      <input class="form-control1" type="text" name="college" placeholder="College name"  />
+                      <input class="form-control1" type="text" name="college" placeholder="College name" required />
                     </div>
 
                     <div class = "col-md-6 mb-4">
                       <label class="sr-only" >Department </label>
-                      <input class="form-control1" type="text" name="department" placeholder="Branch"  />
+                      <input class="form-control1" type="text" name="department" placeholder="Branch"  required/>
                     </div>
 
                     <div class = "col-md-6 mb-4">
                       <label class="sr-only" >Year </label>
-                      <input class="form-control1" type="text" name="year" placeholder="Year"  />
+                      <input class="form-control1" type="text" name="year" placeholder="Year" required />
                     </div>
 
                     <div class = "col-md-6 mb-4">
                       <label class="sr-only" >Division </label>
-                      <input class="form-control1" type="text" name="division" placeholder="Div."  />
+                      <input class="form-control1" type="text" name="division" placeholder="Div." required />
                     </div>
 
                     <div class = "col-md-6 mb-4">
                       <label class="sr-only" >Roll No </label>
-                      <input class="form-control1" type="text" name="rollno" placeholder="Roll No." />
+                      <input class="form-control1" type="text" name="rollno" placeholder="Roll No." required/>
                     </div>
 
                   </div>
@@ -102,7 +102,7 @@
 
             </div>
         </div>
-        
+
 
 
         <div class="part  hide">
@@ -179,11 +179,11 @@
                       <div class="row skillrow">
                         <div class=" col-md-6">
                           <label class="label">Skill 1</label>
-                          <input type="text" name="skills[]" class="form-control1">
+                          <input type="text" name="skills[]" class="form-control1" required>
                         </div>
                         <div class=" col-md-6">
                           <label class="label">Link To the Project</label>
-                          <input type="text" class="form-control1" name="skilllinks[]" placeholder="https://">
+                          <input type="text" class="form-control1" name="skilllinks[]" placeholder="https://" required>
                         </div>
                       </div>
                     </div>
@@ -194,27 +194,27 @@
 
                   <div class = "col-md-12 mb-4" style="margin-top: 10px;">
                     <label class="sr-only">Top Skill </label>
-                      <input class="form-control1" type="text"  name="topskill" placeholder="Top Skill">
+                      <input class="form-control1" type="text"  name="topskill" placeholder="Top Skill" required>
                   </div>
 
                   <div class = "col-md-6 mb-4">
                     <label class="sr-only" >Primary Skill </label>
-                    <input class="form-control1" type="text" name="primaryskill" placeholder="Primary Skill" />
+                    <input class="form-control1" type="text" name="primaryskill" placeholder="Primary Skill" required />
                   </div>
 
                   <div class = "col-md-6 mb-4">
                     <label class="sr-only" >Secondary Skill </label>
-                    <input class="form-control1" type="text"  name="secondaryskill" placeholder="Secondary Skill" />
+                    <input class="form-control1" type="text"  name="secondaryskill" placeholder="Secondary Skill"  />
                   </div>
 
                   <div class = "col-md-12 mb-4" style="margin-top: 10px;">
                     <label class="label">CGPA </label>
-                      <input class="form-control1" type="number" name="cgpa" step="0.1" max='10' min='0'>
+                      <input class="form-control1" type="number" name="cgpa" step="0.1" max='10' min='0' required>
                   </div>
 
                   <div class = "col-md-12 mb-4" style="margin-top: 10px;">
                     <label class="label">Rate Yourself </label>
-                      <input class="form-control1"  type="number" step="0.1" min="0" max='5' name="rating" placeholder="range ( 0.0 to 5.0 )">
+                      <input class="form-control1"  type="number" step="0.1" min="0" max='5' name="rating" placeholder="range ( 0.0 to 5.0 )" required>
                   </div>
 
                 </div>
@@ -239,7 +239,7 @@
 
                   <div class = "col-md-12 mb-1" style="margin-top: 10px;">
                     <label class="label">Pone Number </label>
-                      <input class="form-control1" type="number" name="phone">
+                      <input class="form-control1" type="number" name="phone" required>
                   </div>
 
                   <div class = "col-md-12 mb-4" style="padding-bottom: 20px;">
@@ -249,17 +249,17 @@
 
                   <div class = "col-md-6 mb-4">
                     <label class="label" >Linkden Profile </label>
-                    <input class="form-control1" type="text" name="linkden" placeholder="https://">
+                    <input class="form-control1" type="text" name="linkden" placeholder="https://" required>
                   </div>
 
                   <div class = "col-md-6 mb-4">
                     <label class="label" >Github Profile </label>
-                    <input class="form-control1" type="text" name="github" placeholder="https://github.com/">
+                    <input class="form-control1" type="text" name="github" placeholder="https://github.com/" required>
                   </div>
 
                   <div class = "col-md-6 mb-4">
                     <label class="label" >Personal website </label>
-                    <input class="form-control1" type="text" name="personalsite" placeholder="https://">
+                    <input class="form-control1" type="text" name="personalsite" placeholder="https://" required>
                   </div>
 
                   <div class = "col-md-6 mb-4">
