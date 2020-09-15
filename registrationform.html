@@ -1,106 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-    <title>Registration Page</title>
-    <meta content="" name="descriptison">
-    <meta content="" name="keywords">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Board | PCCOE</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/registrationform.css"/>
+    <link rel="icon" href="./assets/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Padauk&family=Palanquin+Dark&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <form>
-        <div>
-            <h2>Credentials</h2>
-            <label>email:</label>
-            <input type="email" id="email" required>
-            <br><br>
-            <label>password:</label>
-            <input type="password" id="password" required>
-            <br><br>
-            <h2>Personal</h2>
-            <label>Name:</label>
-            <input type="text" id="name" required>
-            <br><br>
-            <label>college:</label>
-            <input type="text" id="college" value="PCCOE" required>
-            <br><br>
-            <label>department:</label>
-            <input type="text" id="department" value="COMPUTER">
-            <br><br>
-            <label>year:</label>
-            <input type="text" id="year" value="TE">
-            <br><br>
-            <label>division:</label>
-            <input type="text" id="division" value="B">
-            <br><br>
-            <label>rollno:</label>
-            <input type="text" id="rollno">
-        </div><br><br>
-        <div>
-            <h2>Social</h2>
-            <label>phone:</label>
-            <input type="tel" id="phone">
-            <br><br>
-            <label>is it a whatsapp number?:</label>
-            <input type="checkbox" id="isWhatsapp" checked>
-            <br><br>
-            <label>LinkedIn:</label>
-            <input type="url" id="linkedin" value="https://in.linkedin.com/">
-            <br><br>
-            <label>Github:</label>
-            <input type="url" id="github" value="https://github.com/bhavansh">
-            <br><br>
-            <label>Personal website:</label>
-            <input type="url" id="personalWebsite" value="https://www.google.com">
-            <br><br>
-            <label>resume:</label>
-            <input type="url" id="resume" value="https://www.google.com">
-        </div><br><br>
-        <div>
-            <h2>Skills</h2>
-            <label>Primary Skill:</label>
-            <input type="text" id="primarySkill" value="Python">
-            <br><br>
-            <label>Secondary Skill:</label>
-            <input type="text" id="secondarySkill" value="Javascript">
-            <br><br>
-            <label>Other Skills:</label>
-            <input type="text" id="otherskills" value="c++">
-            <br><br>
-            <label>Projects:</label>
-            <input type="url" id="project" value="https://github.com/">
-            <br><br>
-            <label>SGPA:</label>
-            <input type="number" id="sgpa" value="9.2">
-        </div><br><br>
-        <div>
-            <h2>Other Details</h2>
-            <label>Bio:</label>
-            <input type="text" id="introduction" value="Student at PCCOE">
-            <br><br>
-            <label>Gender:</label>
-            <select name="gender" id="gender">
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Other">Other</option>
-            </select>
-            <br><br>
-            <label>Age:</label>
-            <input type="number" id="age" value="20">
-            <br><br>
-            <label>Mother tongue:</label>
-            <input type="text" id="motherTongue" value="Marathi">
-            <br><br>
-            <label>Known Languages:</label>
-            <input type="text" id="knownLanguage" value="English">
-        </div><br><br>
-    </form>
-    <button onclick="register()">Submit</button>
-</body>
-<script src="./js/registrationform.js"></script>
+  <div class="container">
+    <div id="stepProgressBar" class="row">
+      <div class="step col-3">
+        <p class="step-text">Personal</p>
+        <div class="bullet">1</div>
+      </div>
+      <div class="step col-3">
+        <p class="step-text">Optionals</p>
+        <div class="bullet">2</div>
+      </div>
+      <div class="step col-3">
+        <p class="step-text">Skills</p>
+        <div class="bullet">3</div>
+      </div>
+      <div class="step col-3">
+        <p class="step-text">Social</p>
+        <div class="bullet ">4</div>
+      </div>
+      
+    </div>
+  
+    <div id="main">
+  
+      <div class="card mb-3 regcard" style="background-color: rgb(248, 247, 255);">
+      <form id="registrationform" enctype="multipart/form-data" method="post" >
 
+        <div class="part">
+            <div class="row no-gutters">
+              
+              <div class="col-md-12">
+                
+                <div class="card-body">
+
+                  <h5 class="card-title"><b>PRESONAL</b><br><br></h5>
+
+                  <div class="row">
+
+                    <div class = "col-md-6 ">
+                      <label class="sr-only">Name </label>
+                      <div class="row input-group mb-4 mr-sm-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">@</div>
+                        </div>
+                        <div class="col-md-10 col-10 input-group-prepend">
+                        <input type="text" class="form-control1" name="name" placeholder="Name" required />
+                      </div>
+                      </div>
+                    </div>
+
+                    <div class = "col-md-6 mb-4 ">
+                      <label class="sr-only" >Email </label>
+                      <input class="form-control1" type="email" name="email" placeholder="Email" required />
+                    </div>
+
+                    <div class = "col-md-6 mb-4">
+                      <label class="sr-only">Password </label>
+                        <input type="password" class="form-control1" name="pass" placeholder="Password" required />
+                    </div>
+
+                    <div class = "col-md-6 mb-4">
+                      <label class="sr-only" >College Name </label>
+                      <input class="form-control1" type="text" name="college" placeholder="College name" required />
+                    </div>
+
+                    <div class = "col-md-6 mb-4">
+                      <label class="sr-only" >Department </label>
+                      <input class="form-control1" type="text" name="department" placeholder="Branch"  required/>
+                    </div>
+
+                    <div class = "col-md-6 mb-4">
+                      <label class="sr-only" >Year </label>
+                      <input class="form-control1" type="text" name="year" placeholder="Year" required />
+                    </div>
+
+                    <div class = "col-md-6 mb-4">
+                      <label class="sr-only" >Division </label>
+                      <input class="form-control1" type="text" name="division" placeholder="Div." required />
+                    </div>
+
+                    <div class = "col-md-6 mb-4">
+                      <label class="sr-only" >Roll No </label>
+                      <input class="form-control1" type="text" name="rollno" placeholder="Roll No." required/>
+                    </div>
+
+                  </div>
+                </div>
+              </div> 
+
+            </div>
+        </div>
+
+
+
+        <div class="part  hide">
+          <div class="row no-gutters">
+            
+            <div class="col-md-9">
+              
+              <div class="card-body">
+
+                <h5 class="card-title"><b>OPTIONALS</b><br><br></h5>
+
+                <div class="row">
+
+                  <div class = "col-md-12 ">
+                    Introduce Yourself
+                  </div>
+                  <div class = "col-md-12 mb-4 ">
+                    <textarea name = "introduction" rows="4" style="width: 100%;"></textarea>
+                  </div>
+
+                  <div class = "col-md-6 mb-4 ">
+                    <label>Gender  :  </label>
+                    <select name="gender" id="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                  </div>
+
+                  <div class = "col-md-6 mb-4">
+                    <label class="sr-only">Age </label>
+                      <input class="form-control1" type="number" name="age" placeholder="Age" min='10' />
+                  </div>
+
+                  <div class = "col-md-12 mb-4">
+                    <label class="sr-only" >Languages </label>
+                      Languages known 
+                      <div id="languageform" >
+                        <label class= "langlabel">Language 1 : </label>
+                        <input type="text" class="form-control1 col-md-8 mb-2" style='margin-left:15px' name="languages[] ">
+                      </div>          
+                    <input type="button" class="addfieldbutton" value="Add another Language" onClick="addlanguage('languageform');">
+                  </div>
+
+                  <div class = "col-md-6 mb-4">
+                    <label class="sr-only" >Mother Tongue </label>
+                    <input class="form-control1" name="mothertongue" placeholder="Mother Tongue" />
+                  </div>
+
+                </div>
+                
+              </div>
+            </div>
+ 
+
+          </div>
+      </div>
+
+
+        <div class="part  hide">
+          <div class="row no-gutters">
+            
+            <div class="col-md-12">
+              
+              <div class="card-body">
+
+                <h5 class="card-title"><b>SKILL SECTION</b><br><br></h5>
+
+                <div class="row">
+
+                  <div class = "col-md-12 mb-4">
+
+                    <div id="skillform" class="row">
+                      <div class="row skillrow">
+                        <div class=" col-md-6">
+                          <label class="label">Skill 1</label>
+                          <input type="text" name="skills[]" class="form-control1" required>
+                        </div>
+                        <div class=" col-md-6">
+                          <label class="label">Link To the Project</label>
+                          <input type="text" class="form-control1" name="skilllinks[]" placeholder="https://" required>
+                        </div>
+                      </div>
+                    </div>
+
+                    <input type="button" class="addfieldbutton" value="Add another skill" onClick="addskill('skillform');">
+
+                  </div>
+
+                  <div class = "col-md-12 mb-4" style="margin-top: 10px;">
+                    <label class="sr-only">Top Skill </label>
+                      <input class="form-control1" type="text"  name="topskill" placeholder="Top Skill" required>
+                  </div>
+
+                  <div class = "col-md-6 mb-4">
+                    <label class="sr-only" >Primary Skill </label>
+                    <input class="form-control1" type="text" name="primaryskill" placeholder="Primary Skill" required />
+                  </div>
+
+                  <div class = "col-md-6 mb-4">
+                    <label class="sr-only" >Secondary Skill </label>
+                    <input class="form-control1" type="text"  name="secondaryskill" placeholder="Secondary Skill"  />
+                  </div>
+
+                  <div class = "col-md-12 mb-4" style="margin-top: 10px;">
+                    <label class="label">CGPA </label>
+                      <input class="form-control1" type="number" name="cgpa" step="0.1" max='10' min='0' required>
+                  </div>
+
+                  <div class = "col-md-12 mb-4" style="margin-top: 10px;">
+                    <label class="label">Rate Yourself </label>
+                      <input class="form-control1"  type="number" step="0.1" min="0" max='5' name="rating" placeholder="range ( 0.0 to 5.0 )" required>
+                  </div>
+
+                </div>
+                
+              </div>
+            </div>
+
+          </div>
+      </div>
+
+      
+        <div class="part  hide">
+          <div class="row no-gutters">
+            
+            <div class="col-md-12">
+              
+              <div class="card-body">
+
+                <h5 class="card-title"><b>SOCIAL</b><br><br></h5>
+
+                <div class="row">
+
+                  <div class = "col-md-12 mb-1" style="margin-top: 10px;">
+                    <label class="label">Pone Number </label>
+                      <input class="form-control1" type="number" name="phone" required>
+                  </div>
+
+                  <div class = "col-md-12 mb-4" style="padding-bottom: 20px;">
+                    <label class="label" >is What'sapp </label>
+                    <input type="checkbox" name = "iswhatsapp"/>
+                  </div>
+
+                  <div class = "col-md-6 mb-4">
+                    <label class="label" >Linkden Profile </label>
+                    <input class="form-control1" type="text" name="linkden" placeholder="https://" required>
+                  </div>
+
+                  <div class = "col-md-6 mb-4">
+                    <label class="label" >Github Profile </label>
+                    <input class="form-control1" type="text" name="github" placeholder="https://github.com/" required>
+                  </div>
+
+                  <div class = "col-md-6 mb-4">
+                    <label class="label" >Personal website </label>
+                    <input class="form-control1" type="text" name="personalsite" placeholder="https://" required>
+                  </div>
+
+                  <div class = "col-md-6 mb-4">
+                    <label class="label" >Resume </label>
+                    <input class="form-control1" type="text" name="resume" placeholder="https://">
+                  </div>
+
+                  <div class = "col-md-12 mb-4" style="margin-top: 20px;">
+                    <center>
+                      <input type="submit" class="submitform" name="submit" value="Submit" style="width: 60%;">
+                    </center>
+                  </div>
+
+                </div>
+                
+              </div>
+            </div>
+
+          </div>
+      </div>
+
+
+      </form>
+      
+      <div class="row">
+        <div class="col-md-6 col-6">
+          <button id="previousBtn" class="arrow btnnxt">
+            <ion-icon name="arrow-back-circle" ></ion-icon>
+          </button>
+        </div>
+        <div class="col-md-6 col-6">
+          <button id="nextBtn" class="arrow btnnxt" >
+            <ion-icon name="arrow-forward-circle" ></ion-icon>
+          </button>
+        </div>
+      </div>
+    </div> 
+    </div>
+  </div>
+    <!-- BLOB -->
+    <div class="blob">
+        <img src="./assets/images/blob.png" id="blob">
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="./js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+    
+    <script src="./js/registrationform.js"></script>
+    <script src="./js/regformdesign.js"></script>
+</body>
 </html>
