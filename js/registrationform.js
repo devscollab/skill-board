@@ -1,34 +1,65 @@
 
-// Function to add data fields to skill array and its links 
 
-var counterskill = 1;
-function addskill(divName){
-    var newdiv = document.createElement('div');
-    newdiv.classList.add('row');
-    newdiv.classList.add('skillrow');
-    newdiv.innerHTML = `<div class=" col-md-6">
-                            <label class="label">Skill ${counterskill+1}</label>
-                            <input type="text" name="skills[]" class="form-control1">
-                        </div>
-                        <div class=" col-md-6">
-                            <label class="label">Link To the Project</label>
-                            <input type="text" class="form-control1" name="skilllinks[]"  placeholder="https://" >
-                        </div>
-                    `;
-    document.getElementById(divName).appendChild(newdiv);
-    counterskill++;    
-}
+// Add Fields Testing
+$(document).ready(function() {
+    var max_fields = 10;
+    var wrapper = $(".languageform");
+    var add_button = $(".addlangbtn");
+
+    var counterlanguage = 1;
+    $(add_button).click(function(e) {
+        e.preventDefault();
+        if (counterlanguage< max_fields) {
+            counterlanguage++;
+            $(wrapper).append(`<div><label class= 'langlabel'>Language ${counterlanguage} : </label><input type="text" name="languages[]" style='margin-left:15px'  class="form-control1 col-md-8 mb-2"  required><a href="#" style="text-decoration:none"  class="delete ">Delete</a></div>`);  //add input box
+        } else {
+            alert('You Reached the limits')
+        }
+    });
+
+    $(wrapper).on("click", ".delete", function(e) {
+        e.preventDefault();
+        $(this).parent('div').remove();
+        counterlanguage--;
+    })
+});
 
 
-// Function to add data fields to language array
+$(document).ready(function() {
+    var max_fields = 10;
+    var wrapper = $(".skillform");
+    var add_button = $(".addskillbtn");
 
-var counterlanguage = 1;
-function addlanguage(divName){
-    var newdiv = document.createElement('div');
-    newdiv.innerHTML = `<label class= 'langlabel'>Language ${counterlanguage+1} : </label><input type='text' class='form-control1 col-md-8 mb-2' style='margin-left:15px' name='languages[]'>`;
-    document.getElementById(divName).appendChild(newdiv);
-    counterlanguage++;    
-}
+    var counterskill = 1;
+    $(add_button).click(function(e) {
+        e.preventDefault();
+        if (counterskill< max_fields) {
+            counterskill++;
+            $(wrapper).append(`<div>
+                                    <div class="row skillrow">
+                                        <div class=" col-md-6">
+                                            <label class="label">Skill </label>
+                                            <input type="text" name="skills[]" class="form-control1" required>
+                                        </div>
+                                        <div class=" col-md-6">
+                                            <label class="label">Link To the Project</label>
+                                            <input type="text" class="form-control1" name="skilllinks[]" placeholder="https://" required>
+                                        </div>
+                                    </div>
+                                    <a href="#" style="text-decoration:none" class="delete float-right">Delete</a>
+                                </div>`);  //add input box
+        } else {
+            alert('You Reached the limits')
+        }
+    });
+
+    $(wrapper).on("click", ".delete", function(e) {
+        e.preventDefault();
+        $(this).parent('div').remove();
+        counterskill--;
+    })
+});
+
 
 
 
@@ -63,7 +94,7 @@ const registrationform = document.getElementById("registrationform")
 
 // Handle form events such as onsubmit
 // Event listner
-registrationform.addEventListener('submit',  function(e) {
+registrationform.addEventListener('submit', async  function(e) {
     e.preventDefault();
 
     // Get the skills and links to projects array
@@ -97,7 +128,7 @@ registrationform.addEventListener('submit',  function(e) {
         "personal" : {
             "name" : this.name.value,
             "college" : this.college.value,
-            "department" : this.college.value,
+            "department" : this.department.value,
             "year" : this.year.value,
             "division" : this.division.value,
             "rollno" : this.rollno.value,
@@ -131,6 +162,9 @@ registrationform.addEventListener('submit',  function(e) {
     };
 
 
+    /*  Github Fetch api commented
+    
+    let url = "https://skboard.herokuapp.com/api/register/student"; // URL for skboard api
     githublink = `https://api.github.com/users/${this.github.value.substr(this.github.value.lastIndexOf('/') + 1)}`; //Github api URL
     
     // Fetch api call to github
@@ -149,5 +183,13 @@ registrationform.addEventListener('submit',  function(e) {
            
         })
         .catch(console.log(""))
+
+    */    
+   
+   let url = "https://skboard.herokuapp.com/api/register/student"; // URL for skboard api
+    const res = await postData(url, user); // Post function
+
+    console.log("Response =>" + JSON.stringify(res));   // Log the response
+    
 
 })

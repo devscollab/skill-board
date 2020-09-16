@@ -159,7 +159,9 @@ input:focus {
 	color : white;
 	border-radius: 20px;
 }
-
+.delete{
+	color: red;
+}
 @media only screen and (max-width: 600px) {
 	#stepProgressBar  {
 		width:  300px;
