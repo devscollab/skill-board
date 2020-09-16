@@ -90,6 +90,7 @@ button:disabled:hover  {
 
 .regcard{
 	background: rgb(179, 177, 177);
+	border-radius: 20px;
 }
 .form-control1 {
     height: 37px;
@@ -159,7 +160,9 @@ input:focus {
 	color : white;
 	border-radius: 20px;
 }
-
+.delete{
+	color: red;
+}
 @media only screen and (max-width: 600px) {
 	#stepProgressBar  {
 		width:  300px;
