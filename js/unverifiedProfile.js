@@ -1,7 +1,7 @@
 async function getData() {
     query = window.location.search
     user = query.substring(1)
-    url = "https://skboard.herokuapp.com/api/student/" +user 
+    url = "https://skboard.herokuapp.com/api/unverified/" +user 
     console.log(url)
     let request = await fetch(url)
     let data = request.json();
@@ -22,13 +22,6 @@ $(document).ready(() => {
                     <img class="profileImg" src="https://cdn0.iconfinder.com/data/icons/social-media-network-4/48/male_avatar-512.png"/>
                     <div class="centerElem">
                         <h2>${user.personal.name}</h2>
-
-                        <a href ="./updateProfile.html?${user._id}">
-                        <button class="btn" style="margin-top: 15px; background-color: skyblue; padding: 10px 20px;">
-                            Update Profile
-                        </button>
-                        </a>
-                        <br>
                         <a href ="${user.social.resume}">
                         <button class="btn" style="margin-top: 15px; background-color: rgb(77, 255, 77); padding: 10px 20px;">
                             Download Full Resume

@@ -69,7 +69,7 @@ $(document).ready(function() {
 
 async function postData(url , data) {
     const response = await fetch(url, {
-      method: "POST", // *GET, POST, PUT, DELETE, etc.
+      method: "PATCH", // *GET, POST, PUT, DELETE, etc.
       mode: "cors", // no-cors, *cors, same-origin
       cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
       //credentials: 'same-origin', // include, *same-origin, omit
@@ -123,8 +123,6 @@ registrationform.addEventListener('submit', async  function(e) {
     const use1r = new FormData(this);
     // Object To be posted
     var user = {
-        "email" : this.email.value,
-        "password" : this.pass.value,
         "personal" : {
             "name" : this.name.value,
             "college" : this.college.value,
@@ -184,11 +182,12 @@ registrationform.addEventListener('submit', async  function(e) {
         .catch(console.log(""))
 
     */    
-   
-   let url = "https://skboard.herokuapp.com/api/register/student"; // URL for skboard api
+    query = window.location.search
+    userID = query.substring(1)
+
+    let url = "https://skboard.herokuapp.com/api/student/update/" +userID; // URL for skboard api
+    console.log(url)
+    console.log(user)
     const res = await postData(url, user); // Post function
-
     console.log("Response =>" + JSON.stringify(res));   // Log the response
-    
-
 })
