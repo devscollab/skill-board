@@ -6,7 +6,11 @@
 
 ![Skill Board](assets/images/logo.png) <!-- .element height="30%" width="30%" -->
 
-Skill Board is a place for the students to showcase their skills & experience and to show the availability & interest in receiving new opportunities to work on new projects and internships. Faculties and recruiters can go through this skill board to view the projects of students with the required skills and can contact the students directly for discussing any particular opportunity.
+Skill Board is a web application where the students can showcase their skills & experience and show the availability & interest in receiving new opportunities to work on new projects and internships. Faculties and recruiters can go through this skill board to view the projects of students with the required skills and can contact the students directly for discussing any particular opportunity.
+
+It is like a job listing page but for students from a particular college.
+
+This is an open source project and everyone is free to contribute. Right now we are building the fronend on this repo. You can find the API for this at https://github.com/devscollab/skill-board-api
 
 ## Table of Content
 
