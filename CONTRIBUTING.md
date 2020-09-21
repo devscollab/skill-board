@@ -10,7 +10,7 @@ There are some guildelines which everyone should follow while contributing to th
 
 3. Mention in the Issue that you want to work on it.
 
-4. Wait for the approval from the Maintainers of this project before startig to work on it.
+4. Wait for the approval from the Maintainers of this project before starting to work on it.
 
 5. Create a pull request after making the changes and mention the Issue number that your pull request is related to.
 
@@ -26,7 +26,7 @@ First step is to fork this repository (devscollab/skill-board) to your GitHub ac
 
 ![Fork](assets/readme/fork.png)
 
-Also, start and watch the reposotory to receive all the updates directly to your mail.
+Also, star and watch the repository to receive all the updates directly to your mail.
 
 **How to Fork a Repository? - [YouTube Link](https://youtu.be/HbSjyU2vf6Y?t=101)**
 
