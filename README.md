@@ -10,7 +10,7 @@ Skill Board is a web application where the students can showcase their skills & 
 
 It is like a job listing page but for students from a particular college.
 
-This is an open source project and everyone is free to contribute. Right now we are building the fronend on this repo. You can find the API for this at https://github.com/devscollab/skill-board-api
+This is an open source project and everyone is free to contribute. Right now we are building the frontend on this repo. You can find the API for this at https://github.com/devscollab/skill-board-api
 
 ## Table of Content
 
@@ -26,8 +26,8 @@ There are some guildelines which everyone should follow while contributing to th
 
 ### Best Practices to follow
 
-1. Code organiszation becomes easier if everyone in the team follows a certain naming pattern.
-For example, to make organisation easier, we sould follow a simple and logical naming pattern for CSS Classes
+1. Code organisation becomes easier if everyone in the team follows a certain naming pattern.
+For example, to make organisation easier, we should follow a simple and logical naming pattern for CSS Classes
 in the format : pagenameElementName
 Example :
    - The Top bar for this page (listings page) can be named <b>.lisitingTopBar</b>
