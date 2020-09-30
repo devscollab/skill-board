@@ -23,13 +23,13 @@ $(document).ready(() => {
                     <div class="centerElem">
                         <h2>${user.personal.name}</h2>
 
-                        <a href ="./updateProfile.html?${user._id}">
+                        <a href="./updateProfile.html?${user._id}">
                         <button class="btn" style="margin-top: 15px; background-color: skyblue; padding: 10px 20px;">
                             Update Profile
                         </button>
                         </a>
                         <br>
-                        <a href ="${user.social.resume}">
+                        <a href="${user.social.resume}" target="_blank">
                         <button class="btn" style="margin-top: 15px; background-color: rgb(77, 255, 77); padding: 10px 20px;">
                             Download Full Resume
                         </button>
@@ -67,10 +67,10 @@ $(document).ready(() => {
                                 ${user.social.phone} 
                                 <hr>
                                 <span class="boldElem">LinkedIn</span> <br>
-                                <a href="${user.social.linkedin}">View Profile</a> 
+                                <a href="${user.social.linkedin}" target="_blank">View Profile</a> 
                                 <hr>
                                 <span class="boldElem">Github</span> <br>
-                                <a href="${user.social.github}">View Profile</a>
+                                <a href="${user.social.github}" target="_blank">View Profile</a>
                             </div>
                         </div>
                     </div>
@@ -103,7 +103,7 @@ $(document).ready(() => {
 
                         <div class="skillCard">
                         <h5>Project Links</h5>
-                        <a href ="${user.skills.projectsforskills}">Link</a>
+                        <a href="${user.skills.projectsforskills}" target="_blank">Link</a>
                         </div>
 
                         <div class="skillCard">
