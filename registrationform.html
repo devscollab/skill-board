@@ -159,7 +159,7 @@
                     <label class="sr-only" >Languages </label>
                       Languages known 
                       <div id="languageform" class="languageform">                        
-                          <div><label class= "langlabel">Language 1 : </label><input type="text" name="languages[]" style='margin-left:15px'  class="form-control1 col-md-8 mb-2"></div>
+                          <div><label class= "langlabel">&#9656;</label><input type="text" name="languages[]" style='margin-left:15px'  class="form-control1 col-md-8 mb-2"></div>
                           <!--<label class= "langlabel">Language 1 : </label>
                           <input type="text" class="form-control1 col-md-8 mb-2" style='margin-left:15px' name='languages[]'>-->
                       </div>          
@@ -206,11 +206,12 @@
                   
                   <div class = "col-md-12 mb-4">
 
+                    <div class="addskillheader">Add your Skills here</div>
                     <div id="skillform" class="row skillform">
                       <div class="row skillrow">
                         <div class=" col-md-6">
                           <label class="label">Skill </label>
-                          <input type="text" name="skills[]" class="form-control1" required>
+                          <input type="text" name="skills[]" class="form-control1" placeholder="" required>
                         </div>
                         <div class=" col-md-6">
                           <label class="label">Link To the Project</label>
@@ -226,12 +227,12 @@
 
                   <div class = "col-md-12 mb-4" style="margin-top: 10px;">
                     <label class="label">CGPA </label>
-                      <input class="form-control1" type="number" name="cgpa" step="0.1" max='10' min='0' required>
+                      <input class="form-control1" type="number" name="cgpa" step="0.1" max='10' min='0' placeholder="Range ( 0.0 to 10.0 )" required>
                   </div>
 
                   <div class = "col-md-12 mb-4" style="margin-top: 10px;">
                     <label class="label">Rate Yourself </label>
-                      <input class="form-control1"  type="number" step="0.1" min="0" max='5' name="rating" placeholder="range ( 0.0 to 5.0 )" required>
+                      <input class="form-control1"  type="number" step="0.1" min="0" max='5' name="rating" placeholder="Range ( 0.0 to 5.0 )" required>
                   </div>
 
                 </div>

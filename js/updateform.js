@@ -11,7 +11,7 @@ $(document).ready(function() {
         e.preventDefault();
         if (counterlanguage< max_fields) {
             counterlanguage++;
-            $(wrapper).append(`<div><label class= 'langlabel'>Language ${counterlanguage} : </label><input type="text" name="languages[]" style='margin-left:15px'  class="form-control1 col-md-8 mb-2"  required><a href="#" style="text-decoration:none"  class="delete ">Delete</a></div>`);  //add input box
+            $(wrapper).append(`<div><label class= 'langlabel'>&#9656; </label><input type="text" name="languages[]" style='margin-left:15px'  class="form-control1 col-md-8 mb-2"  required><a href="#" style="text-decoration:none"  class="delete ">Delete</a></div>`);  //add input box
         } else {
             alert('You Reached the limits')
         }
