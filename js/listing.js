@@ -12,6 +12,11 @@ async function getData() {
       referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
       //body: body // body data type must match "Content-Type" header
     })
+    if(request.status == "200"){
+      console.log("Logged In")
+    } else{
+      window.location.href = "login.html"
+    }
     let data = request.json();
     return data
 }

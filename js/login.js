@@ -15,7 +15,7 @@ async function postData(url , data) {
     });
     if(response.status == "200"){
       alert("Login Succesful!")
-      window.location.href = "listing.html"
+      window.location.href = "index.html"
     } else{
       alert("Something went wrong. Try Again!")
     }
