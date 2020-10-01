@@ -154,7 +154,8 @@ registrationform.addEventListener('submit', async  function(e) {
             "gender": this.gender.value,
             "age" : this.age.value,
             "mother_tongue": this.mothertongue.value,
-            "languages_known" : languagearr
+            "languages_known" : languagearr,
+            "pronoun":this.pronoun.value
         },
         "metaData":{
         }
