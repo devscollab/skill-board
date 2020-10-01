@@ -58,7 +58,7 @@ $(document).ready(() => {
             if (i==0){
                 $(wrapper).append(`
                 <div>
-                    <label class= 'langlabel'>Language ${parseInt(i)+1} : </label><input type="text" value="${user.optionals.languages_known[i]}" name="languages[]" style='margin-left:15px'  class="form-control1 col-md-8 mb-2"  required>
+                    <label class= 'langlabel'>&#9656; </label><input type="text" value="${user.optionals.languages_known[i]}" name="languages[]" style='margin-left:15px'  class="form-control1 col-md-8 mb-2"  required>
                 </div>
             `
             );
@@ -66,7 +66,7 @@ $(document).ready(() => {
             else{
                 $(wrapper).append(`
                     <div>
-                        <label class= 'langlabel'>Language ${parseInt(i)+1} : </label><input type="text" value="${user.optionals.languages_known[i]}" name="languages[]" style='margin-left:15px'  class="form-control1 col-md-8 mb-2"  required>
+                        <label class= 'langlabel'>&#9656; </label><input type="text" value="${user.optionals.languages_known[i]}" name="languages[]" style='margin-left:15px'  class="form-control1 col-md-8 mb-2"  required>
                         <a href="#" style="text-decoration:none"  class="delete ">Delete</a>
                     </div>
                 `

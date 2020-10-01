@@ -119,6 +119,8 @@ input:focus {
 
 .langlabel{
 	padding-top: 15px;
+	font-size: 30px;
+	color: rgb(83, 0, 83);
 }
 .skillrow{
 	padding-left: 15px;
@@ -162,6 +164,11 @@ input:focus {
 }
 .delete{
 	color: red;
+}
+.addskillheader{
+	color: rgb(53, 0, 53);
+	font-weight: bold;
+	margin-top: 10px;
 }
 @media only screen and (max-width: 600px) {
 	#stepProgressBar  {
