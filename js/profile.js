@@ -141,7 +141,9 @@ $(document).ready(() => {
                             <h5>Languages</h5>
                             ${user.optionals.languages_known}
                         </div>
+                        <div id = "promote">
 
+                        </div>
                     </div>
                 </div>      
             </div>
@@ -160,7 +162,10 @@ $(document).ready(() => {
             Delete   
             </button> 
           `)
-          $("#admin").append(`You are a Super-User`) 
+          $("#admin").append(`You are a Super-User`)
+          $("#promote").append(`
+          <button onclick=promoteUser("${user._id}") class = "btn btn-primary btn-lg">Promote To Superuser</button>
+          `) 
         }
     })
 })

@@ -59,4 +59,22 @@ function deleteUnverified(user){
     location.reload()
 }
 
+function promoteUser(user){
+    if(confirm("Are you sure you want to promote this user to SuperUser? Doing so will give the admin access to SkillBoard.")){
+        const url = "https://skboard.herokuapp.com/api/superuser/promote/" + user
+        console.log(url)
+        fetch(url, {
+            method: "POST",
+            body: null,
+            headers : {
+                "Authorization":"Bearer "+accessToken
+            }
+        })
+        .then(response => response.json())
+        .then(json => console.log(json))
+        alert("This user has been promoted to Super User")
+        window.location.href = "index.html"
+    }  
+}
+
 
