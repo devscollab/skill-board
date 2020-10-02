@@ -80,6 +80,10 @@ async function postData(url , data) {
       //body: body // body data type must match "Content-Type" header
       body: JSON.stringify(data),
     });
+    if(response.status=="200"){
+        alert("Registered Succesfully! An Administrator will review and approve your profile shortly. Once approved, your account will be visible on the listing page. Meanwhile, you can login and view the existing accounts listing.")
+        window.location.href = "login.html"
+    }
     return response.json(); // parses JSON response into native JavaScript objects
   }
 
@@ -162,10 +166,6 @@ registrationform.addEventListener('submit', async  function(e) {
         }
     };
 
-
-    /*  Github Fetch api commented
-    
-    let url = "https://skboard.herokuapp.com/api/register/student"; // URL for skboard api
     githublink = `https://api.github.com/users/${this.github.value.substr(this.github.value.lastIndexOf('/') + 1)}`; //Github api URL
     
     // Fetch api call to github
@@ -177,20 +177,11 @@ registrationform.addEventListener('submit', async  function(e) {
         // If github account exist then push student to database
         .then(async (response) => {
 
-            let url = "https://skboard.herokuapp.com/api/register/student"; // URL for skboard api
+            let url = "https://skboard.herokuapp.com/api/register"; // URL for skboard api
 
             const res = await postData(url, user); // Post function
             console.log("Response =>" + JSON.stringify(res));   // Log the response
            
         })
         .catch(console.log(""))
-
-    */    
-   
-   let url = "https://skboard.herokuapp.com/api/register/student"; // URL for skboard api
-    const res = await postData(url, user); // Post function
-
-    console.log("Response =>" + JSON.stringify(res));   // Log the response
-    
-
 })

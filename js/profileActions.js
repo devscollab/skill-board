@@ -1,3 +1,14 @@
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2){
+      var cookie = parts.pop().split(';').shift();
+      return cookie.substring(1, cookie.length-1)
+    }   
+}
+
+var accessToken = getCookie("access_token")
+
 function verifyProfile(user) {
     const url = "https://skboard.herokuapp.com/api/unverified/approve/"+user
     console.log(url) 
@@ -5,7 +16,7 @@ function verifyProfile(user) {
         method: "POST", 
         body: null,
         headers: { 
-            "Content-type": "application/json;"
+            "Authorization":"Bearer "+accessToken
         } 
     }) 
     .then(response => response.json()) 
@@ -15,19 +26,21 @@ function verifyProfile(user) {
 }
 
 function deleteProfile(user){
-    const url = "https://skboard.herokuapp.com/api/student/delete/" +user
+    if(confirm("Are you sure you want to delete this account from SkillBoard? This action cannot be undone.")){
+        const url = "https://skboard.herokuapp.com/api/student/delete/" +user
     console.log(url) 
     fetch(url, { 
         method: "DELETE", 
         body: null,
         headers: { 
-            "Content-type": "application/json;"
+            "Authorization":"Bearer "+accessToken
         } 
     }) 
     .then(response => response.json()) 
     .then(json => console.log(json));
     alert("deleted " +user);
-    location.reload()
+    window.location.href = "index.html"
+    }
 }
 
 function deleteUnverified(user){
@@ -37,7 +50,7 @@ function deleteUnverified(user){
         method: "DELETE", 
         body: null,
         headers: { 
-            "Content-type": "application/json;"
+            "Authorization":"Bearer "+accessToken
         } 
     }) 
     .then(response => response.json()) 

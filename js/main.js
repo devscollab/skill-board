@@ -29,3 +29,18 @@ function closeOptions(){
     options.style.height = ("0")
     options.style.opacity = ("0")
 }
+
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2){
+      var cookie = parts.pop().split(';').shift();
+      return cookie.substring(1, cookie.length-1)
+    }   
+  }
+
+
+function logout(){
+    document.cookie = "access_token=NONE"
+    window.location.href = "login.html"
+}

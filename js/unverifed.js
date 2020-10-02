@@ -1,8 +1,17 @@
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2){
+    var cookie = parts.pop().split(';').shift();
+    return cookie.substring(1, cookie.length-1)
+  }   
+}
+
+var accessToken = getCookie("access_token")
+var role = getCookie("role")
+
 async function getData() {
-  var cookie = document.cookie
-  var token = cookie.slice(13)
-  var accessToken = token.substring(1, token.length-1)
-  console.log(accessToken)
+    var accessToken = getCookie("access_token")
     let request = await fetch("https://skboard.herokuapp.com/api/unverified/all",{
       method: "GET", // *GET, POST, PUT, DELETE, etc.
       mode: "cors", // no-cors, *cors, same-origin

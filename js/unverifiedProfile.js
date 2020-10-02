@@ -1,9 +1,22 @@
 async function getData() {
+    var cookie = document.cookie
+    var token = cookie.slice(13)
+    var accessToken = token.substring(1, token.length-1)
+    console.log(accessToken)
+
     query = window.location.search
     user = query.substring(1)
     url = "https://skboard.herokuapp.com/api/unverified/" +user 
     console.log(url)
-    let request = await fetch(url)
+    let request = await fetch(url,{
+      method: "GET", // *GET, POST, PUT, DELETE, etc.
+      mode: "cors", // no-cors, *cors, same-origin
+      cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+      headers: {
+        "Authorization":"Bearer "+accessToken
+      },
+      referrerPolicy: "no-referrer",
+    })
     let data = request.json();
     return data
 }
