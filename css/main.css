@@ -311,11 +311,11 @@ body{
 .blankBox{
     border-radius: 20px;
     margin: 0 auto;
-    margin-top: 25px;
-    height: 50vh;
-    width: 80%;
-    max-width: 400px;
-    background-color: rgb(214, 214, 214);
+    margin-top: 30px;
+    padding: 0 10px;
+    padding-bottom: 30px;
+    width: 95%;
+    background-color: rgb(228, 228, 228);
     -webkit-box-shadow: 3px 6px 5px -1px rgba(0,0,0,0.36);
     -moz-box-shadow: 3px 6px 5px -1px rgba(0,0,0,0.36);
     box-shadow: 3px 6px 5px -1px rgba(0,0,0,0.36);
@@ -336,9 +336,8 @@ body{
 
 @media only screen and (min-width: 768px) {
     .blankBox{
-        margin-top: 40px;
-        height: 70vh;
-        width: 30vw;
+        margin-top: 30px;
+        max-width: 500px;
     }
     .yourSkillText{
         padding-top: 30px;

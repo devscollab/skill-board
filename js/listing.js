@@ -1,5 +1,22 @@
 async function getData() {
-    let request = await fetch("https://skboard.herokuapp.com/api/student/all")
+  var cookie = document.cookie
+  var token = cookie.slice(13)
+  var accessToken = token.substring(1, token.length-1)
+    let request = await fetch("https://skboard.herokuapp.com/api/student/all", {
+      method: "GET", // *GET, POST, PUT, DELETE, etc.
+      mode: "cors", // no-cors, *cors, same-origin
+      cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+      headers: {
+        "Authorization":"Bearer "+accessToken
+      },
+      referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+      //body: body // body data type must match "Content-Type" header
+    })
+    if(request.status == "200"){
+      console.log("Logged In")
+    } else{
+      window.location.href = "login.html"
+    }
     let data = request.json();
     return data
 }

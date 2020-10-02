@@ -13,14 +13,14 @@ async function postData(url , data) {
       //body: body // body data type must match "Content-Type" header
       body: JSON.stringify(data),
     });
+    if(response.status == "200"){
+      alert("Login Succesful!")
+      window.location.href = "index.html"
+    } else{
+      alert("Something went wrong. Try Again!")
+    }
     return response.json(); // parses JSON response into native JavaScript objects
   }
-
-
-
-
-
-  // Declare form object
 
 const registrationform = document.getElementById("loginform")
 
@@ -29,22 +29,15 @@ const registrationform = document.getElementById("loginform")
 // Event listner
 registrationform.addEventListener('submit', async  function(e) {
     e.preventDefault();
-
-    
-
     const use1r = new FormData(this);
     // Object To be posted
     var user = {
         "email" : this.email.value,
         "password" : this.pass.value,
     };
-
-
-   
-   let url = "https://skboard.herokuapp.com/api/register/student"; // URL for skboard api
+   let url = "https://skboard.herokuapp.com/api/login/student"; // URL for skboard api
     const res = await postData(url, user); // Post function
-
-    console.log("Response =>" + JSON.stringify(res));   // Log the response
-    
-
+    console.log("Response =>" + JSON.stringify(res));   // Log the response  
+    var token = JSON.stringify(res.token)
+    document.cookie = "access_token=" + token
 })

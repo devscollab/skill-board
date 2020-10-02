@@ -66,6 +66,9 @@ $(document).ready(function() {
 
 
 // Function to post data
+var cookie = document.cookie
+var token = cookie.slice(13)
+var accessToken = token.substring(1, token.length-1)
 
 async function postData(url , data) {
     const response = await fetch(url, {
@@ -74,12 +77,18 @@ async function postData(url , data) {
       cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
       //credentials: 'same-origin', // include, *same-origin, omit
       headers: {
-        "Content-Type": "application/json",
+        "Authorization":"Bearer "+accessToken,
       },
       referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
       //body: body // body data type must match "Content-Type" header
       body: JSON.stringify(data),
     });
+    if(response.status = "200"){
+        alert("Updated Successfully!")
+        window.location.href = "listing.html"
+    } else{
+        alert("Something went wrong. Try Again.")
+    }
     return response.json(); // parses JSON response into native JavaScript objects
   }
 
@@ -152,9 +161,11 @@ registrationform.addEventListener('submit', async  function(e) {
             "gender": this.gender.value,
             "age" : this.age.value,
             "mother_tongue": this.mothertongue.value,
+            "pronoun":this.pronoun.value,
             "languages_known" : languagearr
         },
         "metaData":{
+            "hasAdminAccess": false
         }
     };
 

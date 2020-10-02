@@ -158,6 +158,7 @@ registrationform.addEventListener('submit', async  function(e) {
             "pronoun":this.pronoun.value
         },
         "metaData":{
+            "hasAdminAccess": false
         }
     };
 
