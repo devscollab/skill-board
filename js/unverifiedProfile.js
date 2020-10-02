@@ -1,9 +1,15 @@
-async function getData() {
-    var cookie = document.cookie
-    var token = cookie.slice(13)
-    var accessToken = token.substring(1, token.length-1)
-    console.log(accessToken)
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2){
+      var cookie = parts.pop().split(';').shift();
+      return cookie.substring(1, cookie.length-1)
+    }   
+}
 
+var accessToken = getCookie("access_token")
+
+async function getData() {
     query = window.location.search
     user = query.substring(1)
     url = "https://skboard.herokuapp.com/api/unverified/" +user 
@@ -121,7 +127,9 @@ $(document).ready(() => {
                             <h5>Languages</h5>
                             ${user.optionals.languages_known}
                         </div>
-
+                        <div>
+                        <button onclick=promoteUser("${user._id}") class = "btn btn-primary btn-lg">Promote To Superuser</button>
+                        </div>
                     </div>
                 </div>      
             </div>

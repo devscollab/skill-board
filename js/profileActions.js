@@ -10,6 +10,7 @@ function getCookie(name) {
 var accessToken = getCookie("access_token")
 
 function verifyProfile(user) {
+    if(confirm("Are you sure you want to verify this user? They will be added to the listing page.")){
     const url = "https://skboard.herokuapp.com/api/unverified/approve/"+user
     console.log(url) 
     fetch(url, { 
@@ -23,11 +24,13 @@ function verifyProfile(user) {
     .then(json => console.log(json));
     alert("verified " +user);
     location.reload()
+    }
+    
 }
 
 function deleteProfile(user){
     if(confirm("Are you sure you want to delete this account from SkillBoard? This action cannot be undone.")){
-        const url = "https://skboard.herokuapp.com/api/student/delete/" +user
+    const url = "https://skboard.herokuapp.com/api/student/delete/" +user
     console.log(url) 
     fetch(url, { 
         method: "DELETE", 
@@ -44,6 +47,7 @@ function deleteProfile(user){
 }
 
 function deleteUnverified(user){
+    if(confirm("Are you sure you want to verify this user? They will be added to the listing page.")){
     const url = "https://skboard.herokuapp.com/api/unverified/delete/" +user
     console.log(url) 
     fetch(url, { 
@@ -57,6 +61,7 @@ function deleteUnverified(user){
     .then(json => console.log(json));
     alert("deleted " +user);
     location.reload()
+    }
 }
 
 function promoteUser(user){
