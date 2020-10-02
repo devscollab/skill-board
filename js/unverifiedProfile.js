@@ -128,7 +128,7 @@ $(document).ready(() => {
                             ${user.optionals.languages_known}
                         </div>
                         <div>
-                        <button onclick=promoteUser("${user._id}") class = "btn btn-primary btn-lg">Promote To Superuser</button>
+                        <h3>Once verfieid, you can promote a user to super-user</h3>
                         </div>
                     </div>
                 </div>      
