@@ -2,8 +2,6 @@
 
 ![GitHub](https://img.shields.io/github/license/devscollab/skill-board) ![Maintenance](https://img.shields.io/maintenance/yes/2020) ![GitHub last commit](https://img.shields.io/github/last-commit/devscollab/skill-board) ![GitHub contributors](https://img.shields.io/github/contributors/devscollab/skill-board)
 
-> Top Contributor - [adityamahajan-io](https://github.com/adityamahajan-io)
-
 ![Skill Board](assets/images/logo.png) <!-- .element height="30%" width="30%" -->
 
 Skill Board is a web application where the students can showcase their skills & experience and show the availability & interest in receiving new opportunities to work on new projects and internships. Faculties and recruiters can go through this skill board to view the projects of students with the required skills and can contact the students directly for discussing any particular opportunity.
