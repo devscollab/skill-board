@@ -61,12 +61,26 @@ Now, after making any changes to your project on the system, follow these simple
 
 **How to set up a Remote Repo - [YouTube Link](https://youtu.be/-zvHQXnBO6c)**
 
-## 4. Create a pull request
+## 4. Set Up Github Pages on your Forked Repo
+#### Note : This is a required step. We cannot merge your pull request without reviewing your changes.
+Steps to setup Github Pages on your repo : 
+1. On your forked repo, go to the settings tab.
+![Github Pages](assets/readme/gPages_1.png)
+
+2. Find the Gituhb Pages section, select the following settings (branch : master, folder : /root), and hit 'Save'
+![Github Pages](assets/readme/gPages_2.png)
+
+3. Your site will now be published on a URL.
+![Github Pages](assets/readme/gPages_3.png)
+
+4. Copy the URL and paste it along with your Pull Request. This will allow us to review your changes.
+## 5. Create a pull request
 
 After pushing the changes to your forked repository (your-username/skill-board), all you have to do is create a new pull request from your account by simply clicking on the *Pull Request* button.
 
 ![Pull Request](assets/readme/pull%20request.png)
 
+#### Required: Paste your Github Pages URL along with your pull request. You can also paste it in the comments.  
 > NOTE:
 > If you are some commits behind of devscollab:master then you need to first git pull upstream master from the system, push it to your forked repository and then create the Pull Request.
 
