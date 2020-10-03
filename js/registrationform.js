@@ -1,3 +1,36 @@
+// Add Floating Labels to Registration Form
+function floatingLabel(container) {
+    let label = container.querySelector("label"),
+        input = container.querySelector("input");
+
+    input.addEventListener("focus", function() {
+        label.classList.add("label-up");
+        label.classList.remove("label-up-blur")
+        input.classList.remove("input-up-blur")
+        label.classList.add("label-up-focus")
+    });
+
+    input.addEventListener("blur", function() {
+        let length = input.value.length;
+
+        if (length > 0) { // if there is text, hold the label up
+        label.classList.remove("label-up-focus")
+        label.classList.add("label-up-blur")
+        input.classList.add("input-up-blur")
+        } else { // if not, get to main position
+        label.classList.remove("label-up")
+        label.classList.remove("label-up-blur")
+        label.classList.remove("label-up-focus")
+        input.classList.remove("input-up-blur")
+        }
+
+    })
+}
+let floatingLabelContainers = document.querySelectorAll(".floatingLabelContainer");
+floatingLabelContainers.forEach(container => {
+    floatingLabel(container)
+})  
+
 
 
 // Add Fields Testing
