@@ -40,6 +40,7 @@ $(document).ready(() => {
         <div class="row">
             <div class="col-12 col-md-4 leftSide" style="padding: 20px 40px;">
                 <div class="leftSideWrapper">
+                <a href="./index.html"><button class="btn btn-outline-dark">Go Back</button></a>
                 <div id = "admin" style="text-align: center"></div>
                     <img class="profileImg" src="https://cdn0.iconfinder.com/data/icons/social-media-network-4/48/male_avatar-512.png"/>
                     <div class="centerElem">
