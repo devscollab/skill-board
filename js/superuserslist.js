@@ -40,9 +40,9 @@ function getCookie(name) {
             Verify Profiles
           </button>
           </a>
-          <a href="./unverified.html">
+          <a href="./index.html">
           <button class="btn btn-success btn-block">
-            View SuperUsers
+            View Users
           </button>
           </a>
           <br>
