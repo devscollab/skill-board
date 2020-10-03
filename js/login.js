@@ -35,9 +35,12 @@ registrationform.addEventListener('submit', async  function(e) {
         "email" : this.email.value,
         "password" : this.pass.value,
     };
-   let url = "https://skboard.herokuapp.com/api/login/student"; // URL for skboard api
+   let url = "https://skboard.herokuapp.com/api/login/"; // URL for skboard api
     const res = await postData(url, user); // Post function
     console.log("Response =>" + JSON.stringify(res));   // Log the response  
     var token = JSON.stringify(res.token)
+    var role = JSON.stringify(res.role)
     document.cookie = "access_token=" + token
+    document.cookie="role=" + role
+    document.cookie = "currentUser=" + `"` + this.email.value +  `"`
 })

@@ -1,8 +1,16 @@
-var cookie = document.cookie
-var token = cookie.slice(13)
-var accessToken = token.substring(1, token.length-1)
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2){
+      var cookie = parts.pop().split(';').shift();
+      return cookie.substring(1, cookie.length-1)
+    }   
+}
+var role = getCookie("role")
+var currentUser = getCookie("currentUser")
 
 async function getData() {
+    var accessToken = getCookie("access_token")
     query = window.location.search
     user = query.substring(1)
     url = "https://skboard.herokuapp.com/api/student/" +user 
@@ -32,8 +40,10 @@ $(document).ready(() => {
         <div class="row">
             <div class="col-12 col-md-4 leftSide" style="padding: 20px 40px;">
                 <div class="leftSideWrapper">
+                <div id = "admin" style="text-align: center"></div>
                     <img class="profileImg" src="https://cdn0.iconfinder.com/data/icons/social-media-network-4/48/male_avatar-512.png"/>
                     <div class="centerElem">
+                    
                         <h2>${user.personal.name}</h2>
 
                         <a href="./updateProfile.html?${user._id}">
@@ -41,9 +51,12 @@ $(document).ready(() => {
                             Update Profile
                         </button>
                         </a>
+                        <div id = "deleteBtn">
+                        <br>
+                        </div>
                         <br>
                         <a href="${user.social.resume}" target="_blank">
-                        <button class="btn" style="margin-top: 15px; background-color: rgb(77, 255, 77); padding: 10px 20px;">
+                        <button class="btn" style="background-color: rgb(77, 255, 77); padding: 10px 20px;">
                             Download Full Resume
                         </button>
                         </a>
@@ -128,11 +141,31 @@ $(document).ready(() => {
                             <h5>Languages</h5>
                             ${user.optionals.languages_known}
                         </div>
+                        <div id = "promote">
 
+                        </div>
                     </div>
                 </div>      
             </div>
         </div>
         `)
+        if(role=="student" && currentUser==user.email){
+            $("#deleteBtn").append(`
+            <button type="button" class="card-button btn-danger" onclick=deleteProfile("${user._id}")> 
+            Delete   
+            </button> 
+          `)
+          $("#admin").append(`Manage Your Profile`)
+        } else if (role == "superuser"){
+            $("#deleteBtn").append(`
+            <button type="button" class="card-button btn-danger" onclick=deleteProfile("${user._id}")> 
+            Delete   
+            </button> 
+          `)
+          $("#admin").append(`You are a Super-User`)
+          $("#promote").append(`
+          <button onclick=promoteUser("${user._id}") class = "btn btn-primary btn-lg">Promote To Superuser</button>
+          `) 
+        }
     })
 })

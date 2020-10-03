@@ -1,7 +1,15 @@
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2){
+    var cookie = parts.pop().split(';').shift();
+    return cookie.substring(1, cookie.length-1)
+  }   
+}
+
+console.log(document.cookie)
 async function getData() {
-  var cookie = document.cookie
-  var token = cookie.slice(13)
-  var accessToken = token.substring(1, token.length-1)
+    var accessToken = getCookie("access_token")
     let request = await fetch("https://skboard.herokuapp.com/api/student/all", {
       method: "GET", // *GET, POST, PUT, DELETE, etc.
       mode: "cors", // no-cors, *cors, same-origin
@@ -19,14 +27,28 @@ async function getData() {
     }
     let data = request.json();
     return data
+
 }
 
 $(document).ready(() => {
+    var currentUser = getCookie("currentUser")
+    var role = getCookie("role")
+    if(role=="superuser"){
+        $('#dropDown').append(`
+        <a href="./unverified.html">
+        <button class="btn btn-success btn-block">
+          Verify Profiles
+        </button>
+        </a>
+        <br>
+        `)
+    }
+
     getData()
     .then(data => {
         data.docs.forEach(student => {  
           // console.log(student.skills)
-            $('#cards-container').append(`
+          $('#cards-container').append(`
             <div class="container-fluid round-border border" id="i-container">
               <div class="row cardPadding">
                 <div class="col sm-12 column-border">
@@ -67,16 +89,14 @@ $(document).ready(() => {
                     View Profile
                 </button>
                 </a>
-                <br>
-                <button type="button" class="card-button btn-danger" onclick=deleteProfile("${student._id}") style="margin-top: 5px"> 
-                  Delete   
-                </button>
-
+                <div id = "deleteBtn">
+                  
+                </div>
               </div>
               <div class="mobile"></div> 
             </div>
           </div>
-            `)     
+          `)
     })
-})
+  })
 })
