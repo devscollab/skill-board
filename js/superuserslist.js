@@ -83,7 +83,7 @@ function getCookie(name) {
                     <ion-icon name="logo-whatsapp" style="transform: scale(2);"></ion-icon>
                   </div>
                   <div class="col sm-6 align-self-center mx-auto"> 
-                  <a href="#">
+                  <a href="./viewsuperuser.html?${superuser._id}">
                   <button type="button btn-disabeled" class="card-button")> 
                       View Profile
                   </button>
