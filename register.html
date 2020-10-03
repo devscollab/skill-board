@@ -274,24 +274,27 @@
 
                     <div class="col-md-6 mb-4">
                       <label class="label">Linkedin Profile </label>
-                      <input class="form-control1 link" type="text" name="linkden" placeholder="https://" required>
+                      <input class="form-control1 link" type="text" name="linkden" placeholder="https://" required
+                        pattern="^https?://(.*)">
                     </div>
 
                     <div class="col-md-6 mb-4">
                       <label class="label">Github Profile <span style="opacity: 0.5;"> (valid github profile URL is
                           required) </span> </label>
                       <input class="form-control1 link" type="text" name="github" placeholder="https://github.com/"
-                        required>
+                        pattern="^https?://(.*)" required>
                     </div>
 
                     <div class="col-md-6 mb-4">
                       <label class="label">Personal website </label>
-                      <input class="form-control1 link" type="text" name="personalsite" placeholder="https://" required>
+                      <input class="form-control1 link" type="text" name="personalsite" placeholder="https://" required
+                        pattern="^https?://(.*)">
                     </div>
 
                     <div class="col-md-6 mb-4">
                       <label class="label">Resume </label>
-                      <input class="form-control1 link" type="text" name="resume" placeholder="https://">
+                      <input class="form-control1 link" type="text" name="resume" placeholder="https://"
+                        pattern="^https?://(.*)">
                     </div>
 
                     <div class="col-md-12 mb-4" style="margin-top: 20px;">

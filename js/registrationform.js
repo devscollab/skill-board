@@ -166,40 +166,25 @@ registrationform.addEventListener('submit', async function (e) {
             "hasAdminAccess": false
         }
     };
-    if (!checkLinkFields(link)) {
-        githublink = `https://api.github.com/users/${this.github.value.substr(this.github.value.lastIndexOf('/') + 1)}`; //Github api URL
 
-        // Fetch api call to github
-        fetch(githublink)
-            .then(response => response.json())
-            .then(response => {
-                user["metaData"]["github_metadata_object"] = response;
-            })
-            // If github account exist then push student to database
-            .then(async (response) => {
+    githublink = `https://api.github.com/users/${this.github.value.substr(this.github.value.lastIndexOf('/') + 1)}`; //Github api URL
 
-                let url = "https://skboard.herokuapp.com/api/register"; // URL for skboard api
+    // Fetch api call to github
+    fetch(githublink)
+        .then(response => response.json())
+        .then(response => {
+            user["metaData"]["github_metadata_object"] = response;
+        })
+        // If github account exist then push student to database
+        .then(async (response) => {
 
-                const res = await postData(url, user); // Post function
-                console.log("Response =>" + JSON.stringify(res));   // Log the response
+            let url = "https://skboard.herokuapp.com/api/register"; // URL for skboard api
 
-            })
-            .catch(console.log(""))
-    }
-    else {
-        alert('Please Enter a valid link starting with https://')
-    }
+            const res = await postData(url, user); // Post function
+            console.log("Response =>" + JSON.stringify(res));   // Log the response
+
+        })
+        .catch(console.log(""))
+
+
 })
-checkLinkFields = (linkFields) => {
-    if (linkFields.length == 0) {
-        return false;
-    }
-    for (var i = 0; i < linkFields.length; i++) {
-        if (!(linkFields[i].value.startsWith('https://'))) {
-            alert('Please Enter a Valid Link starting with https://')
-            return true;
-        }
-    }
-    return false;
-
-}
