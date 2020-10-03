@@ -14,7 +14,8 @@ async function postData(url , data) {
       body: JSON.stringify(data),
     });
     if(response.status == "200"){
-      alert("Login Succesful!")
+      swal("Good job!", "Login Succesful!!", "success");
+      //alert("Login Succesful!")
       window.location.href = "index.html"
     } else{
       alert("Something went wrong. Try Again!")
