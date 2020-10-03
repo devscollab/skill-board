@@ -112,18 +112,13 @@ body {
 }
 
 .filterbtn button {
-    color: white;
     display: inline-block;
-    background-color: #FF267C;
     border: none;
     padding: 5 px;
     text-align: center;
     margin-left: 15px;
     border-radius: 10%;
     margin-top: 5px;
-    -webkit-box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.32);
-    -moz-box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.32);
-    box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.32);
 }
 
 .filterbtn ul {
@@ -131,7 +126,7 @@ body {
 }
 
 #collapsedOptions {
-    padding-bottom: 10px;
+    padding-bottom: 50px;
     border-bottom: 1px solid black;
     display: flex;
     justify-content: space-evenly;
