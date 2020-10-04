@@ -35,7 +35,18 @@
               </form>
             </div>
 
-            <a class="nav-link" href="#"><ion-icon size="large" name="funnel-outline"></ion-icon></span></a>
+            <div class="dropdown">
+              <div class="filterbtn">
+                  <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+                <ion-icon size="large" name="funnel-outline"></ion-icon>
+                <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                      <li><a href="#">Option 1</a></li>
+                      <li><a href="#">Option 2</a></li>
+                      <li><a href="#">Option 3</a></li>
+                  </ul>
+              </div>
+            </div>
             <a class="nav-link" href="#"><ion-icon size="large" name="barcode-outline"></ion-icon></a>
             
           </div>
@@ -48,7 +59,27 @@
               <ion-icon size="large" name="caret-down-circle-outline"></ion-icon>
             </span>
           </span>
-          <ion-icon size="large" name="menu-outline"></ion-icon>
+          <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <ion-icon name="person-circle-outline" style="transform: scale(2.2); margin-bottom: 5px; margin-left: 10px;"></ion-icon>
+              </button>
+              <div id="dropDown" class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+              <button onclick="logout()" class="btn btn-danger btn-block">
+                Log Out
+              </button>
+              
+              <a href="./index.html" style="text-decoration: none;">
+                <button class="btn btn-success btn-block">
+                  View Users
+                </button>
+              </a>
+              <a href="./superuserslist.html" style="text-decoration: none;">
+                <button class="btn btn-success btn-block">
+                  View Super Users
+                </button>
+              </a>
+            </div>
+        </div>
         </nav>
         <div id="collapsedSearch" style="display: none;">
           <div class="listingSearchForm">
@@ -64,7 +95,18 @@
           </div>
         </div>
         <div id="collapsedOptions" style="display: none;">
-          <span><ion-icon size="large" name="funnel-outline"></ion-icon></span>
+          <div class="dropdown">
+            <div class="filterbtn">
+                <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <ion-icon size="large" name="funnel-outline"></ion-icon>
+              <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Option 1</a></li>
+                    <li><a href="#">Option 2</a></li>
+                    <li><a href="#">Option 3</a></li>
+                </ul>
+            </div>
+          </div>
           <span><ion-icon size="large" name="barcode-outline"></ion-icon></span>
           <span onclick="closeOptions()">
             <ion-icon name="close-circle-outline" size="large" style="color: red"></ion-icon>

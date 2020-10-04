@@ -39,13 +39,13 @@
                 </div>
                 <div class="dropdown">
                     <div class="filterbtn">
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
                       <ion-icon size="large" name="funnel-outline"></ion-icon>
-                  <span class="caret"></span></button>
+                      <span class="caret"></span></button>
                         <ul class="dropdown-menu">
-                            <li><a href="#">HTML</a></li>
-                            <li><a href="#">CSS</a></li>
-                            <li><a href="#">JavaScript</a></li>
+                            <li><a href="#">Option 1</a></li>
+                            <li><a href="#">Option 2</a></li>
+                            <li><a href="#">Option 3</a></li>
                         </ul>
                     </div>
                 </div>
@@ -89,7 +89,18 @@
             </div>
         </div>
         <div id="collapsedOptions" style="display: none;">
-            <span><ion-icon size="large" name="funnel-outline"></ion-icon></span>
+          <div class="dropdown">
+            <div class="filterbtn">
+                <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              <ion-icon size="large" name="funnel-outline"></ion-icon>
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Option 1</a></li>
+                    <li><a href="#">Option 2</a></li>
+                    <li><a href="#">Option 3</a></li>
+                </ul>
+            </div>
+          </div>
             <span><ion-icon size="large" name="barcode-outline"></ion-icon></span>
             <span onclick="closeOptions()">
             <ion-icon name="close-circle-outline" size="large" style="color: red"></ion-icon>
