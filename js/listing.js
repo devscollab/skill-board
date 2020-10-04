@@ -79,9 +79,9 @@ $(document).ready(() => {
                 </div>
                 <div class="mobile"></div>
                 <div class="col sm-12 i-icon cardTextCenter">  
-                  <ion-icon name="logo-github" style="transform:scale(2); cursor: pointer;"></ion-icon>
-                  <ion-icon name="logo-linkedin" style="transform: scale(2);  cursor: pointer;"></ion-icon>
-                  <ion-icon name="logo-whatsapp" style="transform: scale(2);  cursor: pointer;"></ion-icon>
+                  <ion-icon name="logo-github" href="${student.socials.github}"style="transform:scale(2); cursor: pointer;"></ion-icon>
+                  <ion-icon name="logo-linkedin" href="${student.socials.linkedin}" style="transform: scale(2);  cursor: pointer;"></ion-icon>
+                  <ion-icon name="logo-whatsapp" href="${student.socials.number}" style="transform: scale(2);  cursor: pointer;"></ion-icon>
                 </div>
                 <div class="col sm-6 align-self-center mx-auto"> 
                 <a href="./viewProfile.html?${student._id}">
