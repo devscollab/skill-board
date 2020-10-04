@@ -40,6 +40,11 @@ $(document).ready(() => {
           Verify Profiles
         </button>
         </a>
+        <a href="./superuserslist.html">
+        <button class="btn btn-success btn-block">
+          View SuperUsers
+        </button>
+        </a>
         <br>
         `)
     }
