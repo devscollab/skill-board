@@ -431,6 +431,7 @@
                           <input
                             type="submit"
                             class="submitform"
+                            id = "submit"
                             name="submit"
                             value="Submit"
                             style="width: 60%"
@@ -465,6 +466,12 @@
     </div>
 
     <!-- SCRIPTS -->
+
+    <script type="text/javascript">
+      document.getElementById("submit").onclick = function () {
+          location.href = "index.html";
+      };
+    </script>
     <script src="./js/main.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.min.js"
