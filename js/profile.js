@@ -156,14 +156,14 @@ $(document).ready(() => {
             Delete   
             </button> 
           `)
-          $("#admin").append(`Manage Your Profile`)
+          $("#admin").append()
         } else if (role == "superuser"){
             $("#deleteBtn").append(`
             <button type="button" class="card-button btn-danger" onclick=deleteProfile("${user._id}")> 
             Delete   
             </button> 
           `)
-          $("#admin").append(`You are a Super-User`)
+          $("#admin").append()
           $("#promote").append(`
           <button onclick=promoteUser("${user._id}") class = "btn btn-primary btn-lg">Promote To Superuser</button>
           `) 
