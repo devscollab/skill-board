@@ -36,12 +36,12 @@ $(document).ready(() => {
     if(role=="superuser"){
         $('#dropDown').append(`
         <a href="./unverified.html">
-        <button class="btn btn-success btn-block">
+        <button class="btn btn-success btn-block" style="text-decoration: none;">
           Verify Profiles
         </button>
         </a>
         <a href="./superuserslist.html">
-        <button class="btn btn-success btn-block">
+        <button class="btn btn-success btn-block" style="text-decoration: none;">
           View SuperUsers
         </button>
         </a>
