@@ -1,23 +1,23 @@
 /* Main CSS file for entire Website */
 
-*,::before,::after{
+*,
+::before,
+::after {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     overflow-x: hidden;
     width: 100vw;
 }
 
-
-
-.links{
+.links {
     margin-top: 40vh;
     text-align: center;
 }
 
-.headerLine{
+.headerLine {
     position: sticky;
     top: 0;
     height: 10px;
@@ -25,127 +25,138 @@ body{
     z-index: 2;
 }
 
-#blob{
+#blob {
     position: fixed;
     bottom: 0;
     right: 0;
     width: 60%;
     min-width: 500px;
-    z-index:-1;
+    z-index: -1;
 }
+
 
 /*----------------------------NAVIGATION BAR----------------------------*/
 
-.sticky{
+.sticky {
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 1;
 }
 
-.listingTopBar{
+.listingTopBar {
     background-color: white;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
     padding: 0 2vw;
     padding-top: 20px;
-
 }
- 
 
-  .navLogo{
-      border-radius: 12px;
-      width: 15vw;
-      max-width: 120px;
-  }
+.navLogo {
+    border-radius: 12px;
+    width: 15vw;
+    max-width: 120px;
+}
 
-  .listingSearchForm{
-      width: 100%;
-      text-align: center;
-  }
+.listingSearchForm {
+    width: 100%;
+    text-align: center;
+}
 
-  .listingSearchForm{
-      display: inline-block;
-  }
+.listingSearchForm {
+    display: inline-block;
+}
 
-  .listingSearch{
-      background-color: rgb(241, 241, 241);
-      border: hidden;
-      padding: 15px 25px;
-      border-radius: 40px;
-      width: 40vw;
-      -webkit-box-shadow: 1px 4px 5px 0px rgba(0,0,0,0.32);
-      -moz-box-shadow: 1px 4px 5px 0px rgba(0,0,0,0.32);
-      box-shadow: 1px 4px 5px 0px rgba(0,0,0,0.32);
-      outline: none;
-  }
+.listingSearch {
+    background-color: rgb(241, 241, 241);
+    border: hidden;
+    padding: 15px 25px;
+    border-radius: 40px;
+    width: 40vw;
+    -webkit-box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.32);
+    -moz-box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.32);
+    box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.32);
+    outline: none;
+}
 
-  .listingSearchBtn{
-      color: white;
-      display: inline-block;
-      background-color:#FF267C;
-      border: none;
-      padding: 12px 25px;
-      padding-bottom: 8px;
-      text-align: center;
-      margin-left: 15px;
-      border-radius: 10%;
-      -webkit-box-shadow: 1px 4px 5px 0px rgba(0,0,0,0.32);
-      -moz-box-shadow: 1px 4px 5px 0px rgba(0,0,0,0.32);
-      box-shadow: 1px 4px 5px 0px rgba(0,0,0,0.32);  
-  }
+.listingSearchBtn {
+    color: white;
+    display: inline-block;
+    background-color: #FF267C;
+    border: none;
+    padding: 12px 25px;
+    padding-bottom: 8px;
+    text-align: center;
+    margin-left: 15px;
+    border-radius: 10%;
+    -webkit-box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.32);
+    -moz-box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.32);
+    box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.32);
+}
 
-  .lTopBarLeft{
+.lTopBarLeft {
     margin-left: 0;
-  }
+}
 
-  .nav-link{
-      color: black;
-      text-decoration: none;
-  }
+.nav-link {
+    color: black;
+    text-decoration: none;
+}
 
-  #collapsedSearch{
-      opacity: 0;
-      height: 0px;
-      width: 100%;
-      transition: 0.5s;
-  }
+#collapsedSearch {
+    opacity: 0;
+    height: 0px;
+    width: 100%;
+    transition: 0.5s;
+}
 
-  #collapsedOptions{
+.filterbtn button {
+    display: inline-block;
+    border: none;
+    padding: 5 px;
+    text-align: center;
+    margin-left: 15px;
+    border-radius: 10%;
+    margin-top: 5px;
+}
 
-      padding-bottom: 10px;
-      border-bottom: 1px solid black;
-      display: flex;
-      justify-content: space-evenly;
-      height: 0px;
-      opacity: 0;
-      width: 100%;
-      transition: 0.5s;
-  }
+.filterbtn ul {
+    text-align: center;
+}
 
+#collapsedOptions {
+    padding-bottom: 50px;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    height: 0px;
+    opacity: 0;
+    width: 100%;
+    transition: 0.5s;
+}
 
-  @media only screen and (max-width: 993px) {
+@media only screen and (max-width: 993px) {
     .hide {
-      display: none;
+        display: none;
     }
-    .showOnCollapse{
+    .showOnCollapse {
         display: inline-block;
         margin-right: 5vw;
     }
-    .listingSearch{
+    .listingSearch {
         width: 60vw;
     }
-    .navLogo{
+    .navLogo {
         border-radius: 5px;
     }
-  }
+}
 
-  @media only screen and (min-width: 993px) {
-    .showOnCollapse{
+@media only screen and (min-width: 993px) {
+    .showOnCollapse {
         display: none;
     }
-  }
+}
 
 
 /*--------------------------END NAVIGATION BAR--------------------------*/
@@ -153,13 +164,13 @@ body{
 
 /*-----------------------------LISTING PAGE------------------------------*/
 
-
-.profile-page{
+.profile-page {
     margin-right: 70px;
     margin-left: 20px;
     /* margin:0 auto; */
 }
-#i-container{
+
+#i-container {
     /* position: relative; */
     /* display: inline block; */
     text-align: center;
@@ -175,41 +186,47 @@ body{
     /* height: 130px; */
     margin-left: 25px;
     /* width: 2000px; */
-    margin-bottom:15px;
+    margin-bottom: 15px;
     margin-top: 10px;
     opacity: 1;
 }
-.column-border{
+
+.column-border {
     border-right-style: ridge;
     border-right-color: black;
     border-right-width: 2px;
     padding: 0;
     margin: 0;
-
 }
-.i-icon{
+
+.i-icon {
     width: 100%;
     height: auto;
     display: flex;
     justify-content: space-around;
-  /* margin-top: 4%; */
+    /* margin-top: 4%; */
     margin: auto;
 }
-.checked{
+
+.checked {
     color: orange;
 }
+
 .mycontent-left {
     border-right: 1px dashed #333;
-  }
-.i-img{
+}
+
+.i-img {
     height: 100px;
     width: 100px;
 }
-.round-border{
+
+.round-border {
     border-radius: 15px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.40);
 }
-.card-button{
+
+.card-button {
     background-color: #FF267C;
     border-radius: 3px;
     color: white;
@@ -218,72 +235,74 @@ body{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.cardTextCenter{
+.cardTextCenter {
     text-align: left;
     margin-top: auto;
     margin-bottom: auto;
 }
 
-.student{
+.student {
     font-size: small;
 }
 
 @media only screen and (max-width: 422px) {
-    .mobile{
+    .mobile {
         height: 20px;
         width: 100%;
     }
-    .card-button{
+    .card-button {
         margin-right: 10px;
     }
-    #i-container{
+    #i-container {
         margin-left: auto;
         margin-right: auto;
         width: 90vw;
     }
+}
 
-  }
-.tsSkill{
+.tsSkill {
     font-size: small;
     font-weight: bold;
 }
 
-.cardPadding{
+.cardPadding {
     padding: 15px 0;
 }
+
 
 /*-----------------------------END LISITNG PAGE--------------------------*/
 
 
 /*-----------------------------INDEX PAGE--------------------------------*/
 
-
-.headerAlign{
+.headerAlign {
     display: table;
     width: 100%;
 }
-.header{
+
+.header {
     height: 80px;
     background: linear-gradient(90.1deg, #A645F1 19.69%, #C54AFF 78.49%), #C54AFF;
     display: table-cell;
     vertical-align: middle;
-}   
+}
 
-.skillBoard{
+.skillBoard {
     font-family: Palanquin Dark;
     color: white;
     font-size: 20px;
     margin-left: 20px;
 }
 
-.login{
+.login {
     color: white;
     padding: 5px 20px;
     float: right;
 }
-.signUp{
+
+.signUp {
     font-weight: 700;
-    color:#A645F1;
+    color: #A645F1;
     border-radius: 5px;
     margin-right: 20px;
     background-color: white;
@@ -293,13 +312,13 @@ body{
     float: right;
 }
 
-.yourSkill{
+.yourSkill {
     font-family: Palanquin Dark;
     font-weight: 600;
     font-size: 50px;
 }
 
-.goesHere{
+.goesHere {
     font-family: Palanquin Dark;
     font-style: normal;
     font-weight: 600;
@@ -308,7 +327,7 @@ body{
     color: #DB8EFF;
 }
 
-.blankBox{
+.blankBox {
     border-radius: 20px;
     margin: 0 auto;
     margin-top: 30px;
@@ -316,44 +335,37 @@ body{
     padding-bottom: 30px;
     width: 95%;
     background-color: rgb(228, 228, 228);
-    -webkit-box-shadow: 3px 6px 5px -1px rgba(0,0,0,0.36);
-    -moz-box-shadow: 3px 6px 5px -1px rgba(0,0,0,0.36);
-    box-shadow: 3px 6px 5px -1px rgba(0,0,0,0.36);
+    -webkit-box-shadow: 3px 6px 5px -1px rgba(0, 0, 0, 0.36);
+    -moz-box-shadow: 3px 6px 5px -1px rgba(0, 0, 0, 0.36);
+    box-shadow: 3px 6px 5px -1px rgba(0, 0, 0, 0.36);
 }
 
-.arrow{
+.arrow {
     display: flex;
     justify-content: center;
 }
 
-.arrowIcon{
+.arrowIcon {
     position: absolute;
     bottom: 40px;
     transform: scale(4);
     color: white;
 }
 
-
 @media only screen and (min-width: 768px) {
-    .blankBox{
+    .blankBox {
         margin-top: 30px;
         max-width: 500px;
     }
-    .yourSkillText{
+    .yourSkillText {
         padding-top: 30px;
         padding-left: 50px;
     }
-    .skillBoard{
+    .skillBoard {
         color: white;
         font-size: 30px;
-
     }
-  }
+}
+
 
 /*--------------------------END INDEX PAGE--------------------------------*/
-
-
-
-  
-
-  

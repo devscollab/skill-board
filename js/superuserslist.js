@@ -10,7 +10,7 @@ function getCookie(name) {
 console.log(document.cookie)
 async function getData() {
     var accessToken = getCookie("access_token")
-    let request = await fetch("https://skboard.herokuapp.com/api/student/all", {
+    let request = await fetch("https://skboard.herokuapp.com/api/superuser/all", {
       method: "GET", // *GET, POST, PUT, DELETE, etc.
       mode: "cors", // no-cors, *cors, same-origin
       cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
@@ -35,24 +35,23 @@ $(document).ready(() => {
     var role = getCookie("role")
     if(role=="superuser"){
         $('#dropDown').append(`
-        <a href="./unverified.html">
-        <button class="btn btn-success btn-block" style="text-decoration: none;">
+        <a href="./unverified.html" style="text-decoration: none;">
+        <button class="btn btn-success btn-block">
           Verify Profiles
         </button>
         </a>
-        <a href="./superuserslist.html">
-        <button class="btn btn-success btn-block" style="text-decoration: none;">
-          View SuperUsers
+        <a href="./index.html" style="text-decoration: none;">
+        <button class="btn btn-success btn-block">
+          View Users
         </button>
         </a>
-        <br>
         `)
     }
 
     getData()
     .then(data => {
-        data.docs.forEach(student => {  
-          // console.log(student.skills)
+        data.docs.forEach(superuser => {  
+          // console.log(superuser.skills)
           $('#cards-container').append(`
             <div class="container-fluid round-border border" id="i-container">
               <div class="row cardPadding">
@@ -61,26 +60,20 @@ $(document).ready(() => {
                 </div>
                 <div class="col sm-12 cardTextCenter student">
                   <div>
-                    <h4>${student.personal.name}</h4>
+                    <h4>${superuser.personal.name}</h4>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star"></span><br>
-                    <span>${student.personal.year}</span><br>
-                    <span>${student.personal.department}</span>
                   </div>
                 </div>
                 <div class="mobile"></div>
                 <div class="col sm-12 cardTextCenter">
-                  <span class="tsSkill">TOP SKILLS</span>
-                  <h4>${student.skills.primaryskill}</h4>
-                  <a style="font-size: small;">PROJECT LINK</a>
+                  
                 </div>
                 <div class="col sm-12 cardTextCenter">
-                  <span class="tsSkill">SECONDARY SKILL</span>
-                  <h4>${student.skills.secondaryskill}</h4>
-                  <a style="font-size: small;">PROJECT LINK</a>
+                  
                 </div>
                 <div class="mobile"></div>
                 <div class="col sm-12 i-icon cardTextCenter">  
@@ -89,8 +82,8 @@ $(document).ready(() => {
                   <ion-icon name="logo-whatsapp" style="transform: scale(2);"></ion-icon>
                 </div>
                 <div class="col sm-6 align-self-center mx-auto"> 
-                <a href="./viewProfile.html?${student._id}">
-                <button type="button" class="card-button")> 
+                <a href="./viewsuperuser.html?${superuser._id}">
+                <button type="button btn-disabeled" class="card-button")> 
                     View Profile
                 </button>
                 </a>
