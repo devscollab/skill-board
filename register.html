@@ -19,207 +19,344 @@
     </div>
   </div>
 
-
-  <div class="container">
-    <div id="stepProgressBar" class="row">
-      <div class="step col-3">
-        <p class="step-text">Personal</p>
-        <div class="bullet">1</div>
+    <div class="container">
+      <div id="stepProgressBar" class="row">
+        <div class="step col-3">
+          <p class="step-text">Personal</p>
+          <div class="bullet">1</div>
+        </div>
+        <div class="step col-3">
+          <p class="step-text">Optionals</p>
+          <div class="bullet">2</div>
+        </div>
+        <div class="step col-3">
+          <p class="step-text">Skills</p>
+          <div class="bullet">3</div>
+        </div>
+        <div class="step col-3">
+          <p class="step-text">Social</p>
+          <div class="bullet">4</div>
+        </div>
       </div>
-      <div class="step col-3">
-        <p class="step-text">Optionals</p>
-        <div class="bullet">2</div>
-      </div>
-      <div class="step col-3">
-        <p class="step-text">Skills</p>
-        <div class="bullet">3</div>
-      </div>
-      <div class="step col-3">
-        <p class="step-text">Social</p>
-        <div class="bullet ">4</div>
-      </div>
 
-    </div>
+      <div id="main">
+        <div
+          class="card mb-3 regcard"
+          style="
+            background-color: rgb(248, 247, 255);
+            border-radius: 10px;
+            box-shadow: 2px 3px rgb(214, 214, 214);
+          "
+        >
+          <form
+            id="registrationform"
+            enctype="multipart/form-data"
+            method="post"
+            class="container"
+            style="padding-top: 0px; padding-bottom: 0px"
+          >
+            <div class="part">
+              <div class="row no-gutters">
+                <div class="col-md-12">
+                  <div class="card-body">
+                    <h5 class="card-title"><b>PRESONAL</b><br /><br /></h5>
 
-    <div id="main">
-
-      <div class="card mb-3 regcard"
-        style="background-color: rgb(248, 247, 255); border-radius: 10px; box-shadow: 2px 3px rgb(214, 214, 214);">
-        <form id="registrationform" enctype="multipart/form-data" method="post" class="container"
-          style="padding-top:0px ; padding-bottom: 0px;">
-
-          <div class="part">
-            <div class="row no-gutters">
-
-              <div class="col-md-12">
-
-                <div class="card-body">
-
-                  <h5 class="card-title"><b>PRESONAL</b><br><br></h5>
-
-                  <div class="row">
-
-
-                    <div class = "col-md-6 ">
-                      <label class="label">Name </label>
-                      <div class="row input-group mb-4 mr-sm-2">
-                        <div class="input-group-prepend">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label class="sr-only">Name </label>
+                        <div
+                          class="row input-group mb-4 mr-sm-2 name-input-group"
+                        >
+                          <div class="input-group-prepend">
+                            <div class="input-group-text">@</div>
+                          </div>
+                          <div
+                            class="col-md-10 col-10 input-group-prepend name-input-group-prepend"
+                          >
+                            <div class="floatingLabelContainer">
+                              <input
+                                id="name"
+                                type="text"
+                                class="form-control1"
+                                name="name"
+                                required
+                              />
+                              <label for="name" class="floatingLabel"
+                                >Name</label
+                              >
+                            </div>
+                          </div>
                         </div>
-                        <div class="col-md-10 col-10 input-group-prepend">
-                          <input type="text" class="form-control1" name="name" placeholder="Name" required />
+                      </div>
+
+                      <div class="col-md-6 mb-4">
+                        <label class="sr-only">Email </label>
+                        <div class="floatingLabelContainer">
+                          <input
+                            id="email"
+                            class="form-control1"
+                            type="email"
+                            name="email"
+                            required
+                          />
+                          <label for="email" class="floatingLabel">Email</label>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6 mb-4">
+                        <label class="sr-only">Password </label>
+                        <div class="floatingLabelContainer">
+                          <input
+                            id="pass"
+                            type="password"
+                            class="form-control1"
+                            name="pass"
+                            required
+                          />
+                          <label for="pass" class="floatingLabel"
+                            >Password</label
+                          >
+                        </div>
+                      </div>
+
+                      <div class="col-md-6 mb-4">
+                        <label class="sr-only">College Name </label>
+                        <div class="floatingLabelContainer">
+                          <input
+                            id="college"
+                            class="form-control1"
+                            type="text"
+                            name="college"
+                            required
+                          />
+                          <label for="college" class="floatingLabel"
+                            >College name</label
+                          >
+                        </div>
+                      </div>
+
+                      <div class="col-md-6 mb-4">
+                        <label class="sr-only">Department </label>
+                        <div class="floatingLabelContainer">
+                          <input
+                            id="department"
+                            class="form-control1"
+                            type="text"
+                            name="department"
+                            required
+                          />
+                          <label for="department" class="floatingLabel"
+                            >Branch</label
+                          >
+                        </div>
+                      </div>
+
+                      <div class="col-md-6 mb-4">
+                        <label class="sr-only">Year </label>
+                        <div class="floatingLabelContainer">
+                          <input
+                            id="year"
+                            class="form-control1"
+                            type="text"
+                            name="year"
+                            required
+                          />
+                          <label for="year" class="floatingLabel">Year</label>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6 mb-4">
+                        <label class="sr-only">Division </label>
+                        <div class="floatingLabelContainer">
+                          <input
+                            id="division"
+                            class="form-control1"
+                            type="text"
+                            name="division"
+                            required
+                          />
+                          <label for="division" class="floatingLabel"
+                            >Div.</label
+                          >
+                        </div>
+                      </div>
+
+                      <div class="col-md-6 mb-4">
+                        <label class="sr-only">Roll No </label>
+                        <div class="floatingLabelContainer">
+                          <input
+                            id="rollno"
+                            class="form-control1"
+                            type="text"
+                            name="rollno"
+                            required
+                          />
+                          <label for="rollno" class="floatingLabel"
+                            >Roll No.</label
+                          >
                         </div>
                       </div>
                     </div>
-
-                    <div class = "col-md-6 mb-4 ">
-                      <label class="label">Email </label>
-                        <input class="form-control1" id="email" type="email" name="email" placeholder="Email" required />
-                    </div>
-
-                    <div class = "col-md-6 mb-4">
-                      <label class="label">Password </label>
-                        <input type="password" class="form-control1" id="password" name="pass" placeholder="Password" required />
-                    </div>
-
-                    <div class = "col-md-6 mb-4">
-                      <label class="label">College Name </label>
-                      <input class="form-control1" type="text" name="college" placeholder="College name" required />
-                    </div>
-
-                    <div class = "col-md-6 mb-4">
-                      <label class="label">Department </label>
-                      <input class="form-control1" type="text" name="department" placeholder="Branch"  required/>
-                    </div>
-
-                    <div class = "col-md-6 mb-4">
-                      <label class="label">Year </label>
-                      <input class="form-control1" id="year" type="text" name="year" placeholder="Year" required />
-                    </div>
-
-                    <div class = "col-md-6 mb-4">
-                      <label class="label">Division </label>
-                      <input class="form-control1" type="text" name="division" placeholder="Div." required />
-                    </div>
-
-                    <div class = "col-md-6 mb-4">
-                      <label class="label">Roll No </label>
-                      <input class="form-control1" type="text" name="rollno" placeholder="Roll No." required/>
-                    </div>
-
                   </div>
                 </div>
               </div>
-
             </div>
-          </div>
 
+            <div class="part hide">
+              <div class="row no-gutters">
+                <div class="col-md-9">
+                  <div class="card-body">
+                    <h5 class="card-title"><b>OPTIONALS</b><br /><br /></h5>
 
+                    <div class="row">
+                      <div class="col-md-12">Introduce Yourself</div>
+                      <div class="col-md-12 mb-4">
+                        <textarea
+                          name="introduction"
+                          rows="4"
+                          style="width: 100%"
+                        ></textarea>
+                      </div>
 
-          <div class="part  hide">
-            <div class="row no-gutters">
+                      <div class="col-md-6 mb-4">
+                        <label>Gender : </label>
+                        <select name="gender" id="gender">
+                          <option value="Male">Male</option>
+                          <option value="Female">Female</option>
+                          <option value="Other">Other</option>
+                        </select>
+                      </div>
 
-              <div class="col-md-9">
+                      <div class="col-md-6 mb-4">
+                        <label>Preferred Pronoun : </label>
+                        <select name="pronoun" id="">
+                          <option value="he/him">he/him</option>
+                          <option value="she/her">she/her</option>
+                          <option value="them/they">them/they</option>
+                        </select>
+                      </div>
 
-                <div class="card-body">
+                      <div class="col-md-6 mb-4">
+                        <label class="sr-only">Age </label>
+                        <div class="floatingLabelContainer">
+                          <input
+                            id="age"
+                            class="form-control1"
+                            type="number"
+                            name="age"
+                            min="10"
+                          />
+                          <label for="age" class="floatingLabel">Age</label>
+                        </div>
+                      </div>
 
-                  <h5 class="card-title"><b>OPTIONALS</b><br><br></h5>
-
-                  <div style="padding-bottom: 15px;">
-                    <label class="label">Short Bio :</label>
-                    <textarea class="form-control1" name="introduction" rows="4"></textarea>
-                  </div>
-
-                  <div class = "col-md-6 mb-4 ">
-                    <label class="label">Gender  :  </label>
-                    <select name="gender" id="gender">
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                        <option value="Other">Other</option>
-                      </select>
-                    </div>
-
-                  <div class = "col-md-6 mb-4">
-                    <label class="label">Preferred Pronoun  : </label>
-                    <select name="pronoun" id="">
-                      <option value="he/him">he/him</option>
-                      <option value="she/her">she/her</option>
-                      <option value="them/they">them/they</option>
-                    </select>
-
-                    </div>
-
-                  <div class = "col-md-6 mb-4">
-                    <label class="label">Age </label>
-                      <input class="form-control1" type="number" name="age" placeholder="Age" min='10' />
-                    </div>
-
-                    <div class="col-md-12 mb-4">
-                      <label class="sr-only">Languages </label>
-                      Languages known
-                      <div id="languageform" class="languageform">
-                        <div><label class="langlabel">&#9656;</label><input type="text" name="languages[]"
-                            style='margin-left:15px' class="form-control1 col-md-8 mb-2"></div>
-                        <!--<label class= "langlabel">Language 1 : </label>
+                      <div class="col-md-12 mb-4">
+                        <label class="sr-only">Languages </label>
+                        Languages known
+                        <div id="languageform" class="languageform">
+                          <div>
+                            <label class="langlabel">&#9656;</label
+                            ><input
+                              type="text"
+                              name="languages[]"
+                              style="margin-left: 15px"
+                              class="form-control1 col-md-8 mb-2"
+                            />
+                          </div>
+                          <!--<label class= "langlabel">Language 1 : </label>
                           <input type="text" class="form-control1 col-md-8 mb-2" style='margin-left:15px' name='languages[]'>-->
+                        </div>
+                        <input
+                          type="button"
+                          class="addfieldbutton addlangbtn"
+                          value="Add another Language"
+                        />
                       </div>
-                      <input type="button" class="addfieldbutton addlangbtn" value="Add another Language">
-                    </div>
-             
-                  <div class = "col-md-6 mb-4">
-                    <label class="label">Mother Tongue </label>
-                    <input class="form-control1" name="mothertongue" placeholder="Mother Tongue" />
-                  </div>
 
+                      <div class="col-md-6 mb-4">
+                        <label class="sr-only">Mother Tongue </label>
+                        <div class="floatingLabelContainer">
+                          <input
+                            id="mothertongue"
+                            class="form-control1"
+                            name="mothertongue"
+                          />
+                          <label for="mothertongue" class="floatingLabel">Mother Tongue</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-
-
             </div>
-          </div>
 
+            <div class="part hide">
+              <div class="row no-gutters">
+                <div class="col-md-12">
+                  <div class="card-body">
+                    <h5 class="card-title"><b>SKILL SECTION</b><br /><br /></h5>
 
-          <div class="part  hide">
-            <div class="row no-gutters">
-
-              <div class="col-md-12">
-
-                <div class="card-body">
-
-                  <h5 class="card-title"><b>SKILL SECTION</b><br><br></h5>
-
-                  <div class="row">
-                  <div class = "col-md-6 mb-4">
-                    <label class="label">Primary Skill </label>
-                    <input class="form-control1" type="text" name="primaryskill" placeholder="Primary Skill" required />
-                  </div>
-
-                  <div class = "col-md-6 mb-4">
-                    <label class="label">Secondary Skill </label>
-                    <input class="form-control1" type="text"  name="secondaryskill" placeholder="Secondary Skill"  />
-                  </div>
-
-                  
-                    <div class="col-md-12 mb-4">
-
-                      <div class="addskillheader">Add your Skills here</div>
-                      <div id="skillform" class="row skillform">
-                        <div class="row skillrow">
-                          <div class=" col-md-6">
-                            <label class="label">Skill </label>
-                            <input type="text" name="skills[]" class="form-control1" placeholder="" required>
-                          </div>
-                          <div class=" col-md-6">
-                            <label class="label">Link To the Project</label>
-                            <input type="text" class="form-control1 link" name="skilllinks[]" placeholder="https://"
-                              required>
-                          </div>
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+                        <label class="sr-only">Primary Skill </label>
+                        <div class="floatingLabelContainer">
+                          <input
+                            id="primaryskill"
+                            class="form-control1"
+                            type="text"
+                            name="primaryskill"
+                            required
+                          />
+                          <label for="primaryskill" class="floatingLabel">Primary Skill</label>
                         </div>
                       </div>
 
-                      <input type="button" class="addfieldbutton addskillbtn" value="Add another skill">
+                      <div class="col-md-6 mb-4">
+                        <label class="sr-only">Secondary Skill </label>
+                        <div class="floatingLabelContainer">
+                          <input
+                            id="secondaryskill"
+                            class="form-control1"
+                            type="text"
+                            name="secondaryskill"
+                          />
+                          <label for="secondaryskill" class="floatingLabel">Secondary Skill</label>
+                        </div>
+                      </div>
 
-                    </div>
+                      <div class="col-md-12 mb-4">
+                        <div class="addskillheader">Add your Skills here</div>
+                        <div id="skillform" class="row skillform">
+                          <div class="row skillrow">
+                            <div class="col-md-6">
+                              <label class="label">Skill </label>
+                              <input
+                                type="text"
+                                name="skills[]"
+                                class="form-control1"
+                                placeholder=""
+                                required
+                              />
+                            </div>
+                            <div class="col-md-6">
+                              <label class="label">Link To the Project</label>
+                              <input
+                                type="text"
+                                class="form-control1"
+                                name="skilllinks[]"
+                                placeholder="https://"
+                                required
+                              />
+                            </div>
+                          </div>
+                        </div>
 
+                        <input
+                          type="button"
+                          class="addfieldbutton addskillbtn"
+                          value="Add another skill"
+                        />
+                      </div>
 
                     <div class="col-md-12 mb-4" style="margin-top: 10px;">
                       <label class="label">CGPA </label>
@@ -234,7 +371,6 @@
                     </div>
 
                   </div>
-
                 </div>
               </div>
 
@@ -295,7 +431,6 @@
                     </div>
 
                   </div>
-
                 </div>
               </div>
 

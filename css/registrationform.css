@@ -1,185 +1,235 @@
-#stepProgressBar  {
-	display:  flex;
-	justify-content:  space-between;
-	align-items:  flex-end;
-	width:  350px;
-	margin:  0  auto;
-	margin-bottom:  40px;
+:root {
+  --border: #e4e5d6;
+  --text: #80868b;
+  --active: #1977d8;
+  --text-size: 16px;
+  --text-small: 13px;
 }
 
-.step  {
-text-align:  center;
+#stepProgressBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 350px;
+  margin: 0 auto;
+  margin-bottom: 40px;
 }
 
-.step-text  {
-margin-bottom:  10px;
-color:  #28a745;
-font-size: small;
+.step {
+  text-align: center;
 }
 
+.step-text {
+  margin-bottom: 10px;
+  color: #28a745;
+  font-size: small;
+}
 
 .bullet {
-	border: 1px solid #28a745;
-	height: 25px;
-	width: 25px;
-	border-radius: 50%;
-	color: #28a745;
-	display: inline-block;
-	position: relative;
-	transition: background-color 500ms;
-  line-height:20px;
+  border: 1px solid #28a745;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  color: #28a745;
+  display: inline-block;
+  position: relative;
+  transition: background-color 500ms;
+  line-height: 20px;
   vertical-align: middle;
 }
 
-
-.bullet.completed  {
-	color:  white;
-	background-color:  #28a745;
+.bullet.completed {
+  color: white;
+  background-color: #28a745;
 }
 
-
-
 .bullet.completed::after {
-	content: '';
-	position: absolute;
-	right: -60px;
-	bottom: 10px;
-	height: 1px;
-	width: 64px;
-	background-color: #28a745;
+  content: "";
+  position: absolute;
+  right: -60px;
+  bottom: 10px;
+  height: 1px;
+  width: 64px;
+  background-color: #28a745;
 }
 
 /* Base styles and helper stuff */
-.hidden  {
-	display:  none;
-}
- 
-button  {
-	padding:  5px  10px;
-	border:  1px  solid  black;
-	transition:  250ms background-color;
+.hidden {
+  display: none;
 }
 
-button:hover  {
-	cursor:  pointer;
-	color:  purple;
+button {
+  padding: 5px 10px;
+  border: 1px solid black;
+  transition: 250ms background-color;
 }
 
-button:disabled:hover  {
-	opacity:  0.6;
-	cursor:  not-allowed;
+button:hover {
+  cursor: pointer;
+  color: purple;
 }
 
-.text-center  {
-	text-align:  center;
+button:disabled:hover {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
-  
-.container  {
-	max-width:  400px;
-	margin:  0  auto;
-	margin-top:  20px;
-	padding:  40px;
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 40px;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 .current {
-    display: block;
+  display: block;
 }
 
-.regcard{
-	background: rgb(179, 177, 177);
-	border-radius: 20px;
+.regcard {
+  background: rgb(179, 177, 177);
+  border-radius: 20px;
 }
+
+.name-input-group {
+	margin: 0 !important;
+	padding:0 !important;
+}
+
+.name-input-group-prepend {
+	left: 10px !important;
+	padding: 0px !important;
+}
+
 .form-control1 {
-    height: 37px;
-    border: none;
-    border-bottom: 2px solid #e6e6e6;
-    width: 100%;
-    color: #666;
+  padding: 5px;
+  height: 37px;
+  border: none;
+  border-bottom: 2px solid #e6e6e6;
+  width: 100%;
+  color: #666;
 }
 .form-control1 :focus {
-    height: 37px;
-    border: none;
-    border-bottom: 2px solid #e6e6e6;
-    width: 100%;
-    color: #666;
+  height: 37px;
+  border: none;
+  border-bottom: 2px solid #e6e6e6;
+  width: 100%;
+  color: #666;
 }
 
 input {
-	-webkit-transition: width .35s ease-in-out;
-	transition: width .35s ease-in-out;
-	background: none;
-  }
+  -webkit-transition: width 0.35s ease-in-out;
+  transition: width 0.35s ease-in-out;
+  background: none;
+  outline: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+.form-control1.input-up-blur {
+  border: 2px solid #e6e6e6;
+}
 
 input:focus {
-	border: none;
-  }
+  border: 2px solid var(--active);
+}
 
-.langlabel{
-	padding-top: 15px;
-	font-size: 30px;
-	color: rgb(83, 0, 83);
+.floatingLabelContainer {
+	position: relative;
+	width: 100%;
 }
-.skillrow{
-	padding-left: 15px;
-	margin-top: 15px;
+
+.floatingLabel {
+  padding: 0 3px;
+  color: var(--text);
+  font-size: var(--text-size);
+  position: absolute;
+  left: 1%;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.2s, color 0s;
+  cursor: text;
 }
-.label{
-	margin-bottom: -35px;
+
+.label-up {
+  background: rgb(248, 247, 255);
+  font-size: var(--text-small);
+  top: 0% !important;
 }
-#previousBtn{
-	float: right;
-	width: 100px;
-	margin-right: 5%;
+.label-up-focus {
+  color: var(--active);
 }
-#nextBtn{
-	float: left;
-	width: 100px;	
-	margin-left: 5%;
+.label-up-blur {
+  color: var(--text);
 }
-.btnnxt{
-	background: none;
-	border: none;
-	margin-top: 55px;
-	font-size: 3rem;
+
+.langlabel {
+  padding-top: 15px;
+  font-size: 30px;
+  color: rgb(83, 0, 83);
+}
+.skillrow {
+  padding-left: 15px;
+  margin-top: 15px;
+}
+.label {
+  margin-bottom: -35px;
+}
+#previousBtn {
+  float: right;
+  width: 100px;
+  margin-right: 5%;
+}
+#nextBtn {
+  float: left;
+  width: 100px;
+  margin-left: 5%;
+}
+.btnnxt {
+  background: none;
+  border: none;
+  margin-top: 55px;
+  font-size: 3rem;
 }
 
 .addfieldbutton {
-	margin-top: 10px;
-	border-radius: 10px;
-	padding:2px 10px;
-	background-color:none;
-	border: 2px solid  rgb(182, 113, 214);
-	vertical-align: middle;
-	color:  rgb(182, 113, 214);
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 2px 10px;
+  background-color: none;
+  border: 2px solid rgb(182, 113, 214);
+  vertical-align: middle;
+  color: rgb(182, 113, 214);
 }
-.submitform{
-	padding : 5px 3px;
-	border: 2px solid  rgb(182, 113, 214);
-	background-color:  rgb(182, 113, 214);
-	color : white;
-	border-radius: 20px;
+.submitform {
+  padding: 5px 3px;
+  border: 2px solid rgb(182, 113, 214);
+  background-color: rgb(182, 113, 214);
+  color: white;
+  border-radius: 20px;
 }
-.delete{
-	color: red;
+.delete {
+  color: red;
 }
-.addskillheader{
-	color: rgb(53, 0, 53);
-	font-weight: bold;
-	margin-top: 10px;
+.addskillheader {
+  color: rgb(53, 0, 53);
+  font-weight: bold;
+  margin-top: 10px;
 }
 @media only screen and (max-width: 600px) {
-	#stepProgressBar  {
-		width:  300px;
-	}
-	.bullet.completed::after {
-		width: 54px;
-		margin-right: 8px;
-	}
-	.step-text  {
-		font-size: smaller;
-	}
-	
+  #stepProgressBar {
+    width: 300px;
   }
+  .bullet.completed::after {
+    width: 54px;
+    margin-right: 8px;
+  }
+  .step-text {
+    font-size: smaller;
+  }
+}
