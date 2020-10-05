@@ -163,7 +163,9 @@ body {
 
 
 /*-----------------------------LISTING PAGE------------------------------*/
-
+.socialIcons{
+    color: black;
+}
 .profile-page {
     margin-right: 70px;
     margin-left: 20px;

@@ -84,9 +84,9 @@ $(document).ready(() => {
                 </div>
                 <div class="mobile"></div>
                 <div class="col sm-12 i-icon cardTextCenter">  
-                  <ion-icon name="logo-github" href="${student.socials.github}"style="transform:scale(2); cursor: pointer;"></ion-icon>
-                  <ion-icon name="logo-linkedin" href="${student.socials.linkedin}" style="transform: scale(2);  cursor: pointer;"></ion-icon>
-                  <ion-icon name="logo-whatsapp" href="${student.socials.number}" style="transform: scale(2);  cursor: pointer;"></ion-icon>
+                  <a href="${student.social.github}" class="socialIcons"><ion-icon name="logo-github" style="transform:scale(2); cursor: pointer;"></ion-icon></a>
+                  <a href="${student.social.linkedin}" class="socialIcons"><ion-icon name="logo-linkedin" style="transform: scale(2);  cursor: pointer;"></ion-icon></a>
+                  <a href="${student.social.number}" class="socialIcons"><ion-icon name="logo-whatsapp" href="${student.social.number}" style="transform: scale(2);  cursor: pointer;"></ion-icon></a>
                 </div>
                 <div class="col sm-6 align-self-center mx-auto"> 
                 <a href="./viewProfile.html?${student._id}">
