@@ -69,8 +69,8 @@ $(document).ready(function() {
 
 async function postData(url , data) {
     var cookie = document.cookie
-    var token = cookie.slice(13)
-    var accessToken = token.substring(1, token.length-1)
+    var token = cookie.split(";")[2]
+    var accessToken = token.slice(15,token.length-1)
 
     const response = await fetch(url, {
       method: "PATCH", // *GET, POST, PUT, DELETE, etc.
