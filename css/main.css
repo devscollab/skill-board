@@ -370,4 +370,35 @@ body {
 }
 
 
-/*--------------------------END INDEX PAGE--------------------------------*/
+
+
+/*-----------------------------FOOTER--------------------------------*/
+
+.footer{
+    background-color: #5f5f5f;
+    color:#fff;
+    position:relative;
+    bottom: 0;
+    width: 100vw;
+}
+
+.footer-content{
+    border-left: 0.3rem solid #fe267b;
+}
+
+.footer-icon{
+    color:white;
+    margin-bottom: 0.7rem;
+}
+
+@media only screen and (max-width:422px){
+    .footer-icon{
+        padding: 1rem 0;
+    }
+
+    .footer-content{
+        border-top: 0.3rem solid #fe267b;
+        border: 5px;
+    }
+
+}
