@@ -384,6 +384,7 @@ body {
 
 .footer-content{
     border-left: 0.3rem solid #fe267b;
+    font-family: Palanquin Dark;
 }
 
 .footer-icon{
@@ -393,12 +394,14 @@ body {
 
 @media only screen and (max-width:422px){
     .footer-icon{
-        padding: 1rem 0;
+        padding: 0.5rem 0;
     }
 
     .footer-content{
         border-top: 0.3rem solid #fe267b;
-        border: 5px;
+        margin-left: 5rem;
+        margin-right: 5rem;
+        border-left: none;
     }
 
 }
