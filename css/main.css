@@ -389,18 +389,20 @@ body {
 
 .footer-icon{
     color:white;
-    margin-bottom: 0.7rem;
+    padding-top: 0.7rem;
+}
+
+.h4 .footer-content{
+    margin-bottom: 0 !important;
 }
 
 @media only screen and (max-width:422px){
     .footer-icon{
-        padding: 0.5rem 0;
+        padding: 0.3rem 0;
     }
 
     .footer-content{
-        border-top: 0.3rem solid #fe267b;
-        margin-left: 5rem;
-        margin-right: 5rem;
+        border-bottom: 0.3rem solid #fe267b;
         border-left: none;
     }
 
