@@ -389,7 +389,15 @@ body {
 
 .footer-icon{
     color:white;
-    padding-top: 0.7rem;
+    padding-top: 0.5rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.footerLogo{
+    border-radius: 12px;
+    width: 15vw;
+    max-width: 70px;
 }
 
 .h4 .footer-content{
@@ -398,7 +406,7 @@ body {
 
 @media only screen and (max-width:422px){
     .footer-icon{
-        padding: 0.3rem 0;
+        padding-right: 0.5rem;
     }
 
     .footer-content{
