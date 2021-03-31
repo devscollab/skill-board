@@ -370,4 +370,48 @@ body {
 }
 
 
-/*--------------------------END INDEX PAGE--------------------------------*/
+
+
+/*-----------------------------FOOTER--------------------------------*/
+
+.footer{
+    background-color: #5f5f5f;
+    color:#fff;
+    position:relative;
+    bottom: 0;
+    width: 100vw;
+}
+
+.footer-content{
+    border-left: 0.3rem solid #fe267b;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-icon{
+    color:white;
+    padding-top: 0.5rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.footerLogo{
+    border-radius: 12px;
+    width: 15vw;
+    max-width: 70px;
+}
+
+.h4 .footer-content{
+    margin-bottom: 0 !important;
+}
+
+@media only screen and (max-width:422px){
+    .footer-icon{
+        padding-right: 0.5rem;
+    }
+
+    .footer-content{
+        border-bottom: 0.3rem solid #fe267b;
+        border-left: none;
+    }
+
+}
