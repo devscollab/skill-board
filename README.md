@@ -46,6 +46,6 @@ If you are facing any difficulties in managing or contributing to this project, 
 
 If there is any issues in using the skill board, contact us via email at [devscollab@gmail.com](mailto:devscollab@gmail.com).
 
-For reporting bugs or requesting features, create a new issue in this repository with the proper template.
+For reporting bugs or requesting features, create a [new issue](https://github.com/devscollab/skill-board/issues/new/choose) in this repository with the proper template.
 
 Maintained by - [@tejasmorkar](https://github.com/tejasmorkar) and [@suyashsonawane](https://github.com/suyashsonawane)
